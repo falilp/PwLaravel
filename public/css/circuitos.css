@@ -1,0 +1,35 @@
+.header_circuitos{
+}
+
+.header_circuitos img{
+        display: block;
+        height: auto;
+        max-width: 100%;
+        right: auto;
+}
+
+.header_circuitos h1{
+        text-align: center;
+        margin-top: 7rem;
+        margin-left: 5rem;
+        font-size: 40px;
+        font-weight: bold;
+}
+
+.header_circuitos h2{
+    margin-top: 2rem;
+    margin-left: 6rem;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header_circuitos p{
+    margin-top: 2rem;
+    margin-left: 7rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/**/
+

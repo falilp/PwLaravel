@@ -1,0 +1,170 @@
+.Objetos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+  @gray-darker:               #444444;
+  @gray-dark:                 #696969;
+  @gray:                      #999999;
+  @gray-light:                #cccccc;
+  @gray-lighter:              #ececec;
+  @gray-lightest:             lighten(@gray-lighter,4%);
+
+  *,
+  *::before,
+  *::after { 
+    box-sizing: border-box;
+  }
+
+  .header_pistas html {
+    background-color: #f0f0f0;
+  }
+
+  .header_pistas body {
+    margin-top: 10rem;
+    color: @gray;
+    font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 1rem;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+  }
+
+  .header_pistas img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  .header_pistas h1{
+    text-align: center;
+    margin-left: 5rem;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .header_pistas .btn {
+    background-color: white;
+    border: 1px solid @gray-light;
+    //border-radius: 1rem;
+    color: @gray-dark;
+    padding: 0.5rem;
+    text-transform: lowercase;
+  }
+
+  .header_pistas .btn--block {
+    display: block;
+    width: 100%;
+  }
+  
+  .header_pistas .cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header_pistas .cards__item {
+    display: flex;
+    padding: 1rem;
+    @media(min-width: 40rem) {
+      width: 50%;
+    }
+    @media(min-width: 56rem) {
+      width: 33.3333%;
+    }
+  }
+
+  .header_pistas .card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    &:hover {
+      .card__image {
+        filter: contrast(100%);
+      }
+    }
+  }
+
+  .header_pistas .card__content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .header_pistas .card__image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    filter: contrast(70%);
+    //filter: saturate(180%);
+    overflow: hidden;
+    position: relative;
+    transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 56.25%; // 16:9 aspect ratio
+    }
+    @media(min-width: 40rem) {
+      &::before {
+        padding-top: 66.6%; // 3:2 aspect ratio
+      }
+    }
+  }
+
+  .header_pistas .card__image--f11 {
+    background-image: url(https://d26itsb5vlqdeq.cloudfront.net//image/B5F4218B-DF4C-4B6E-5E9BEED066BDD345);
+  }
+
+  .header_pistas .card__image--f7 {
+    background-image: url(  https://www.prace.es/wp-content/uploads/2020/10/Campo_Futbol_Cesped_Artificial_Etea_Vigo.jpg);
+  }
+
+  .header_pistas .card__image--fs {
+    background-image: url(https://d26itsb5vlqdeq.cloudfront.net//image/BBC54D1A-C4F2-F6B5-DED90650B840D414);
+  }
+
+  .header_pistas .card__image--bal {
+    background-image: url(https://d26itsb5vlqdeq.cloudfront.net//image/840F48B6-0669-3657-AADBDF257C8CCD10);
+  }
+
+  .header_pistas .card__image--padel {
+    background-image: url(https://multipasto.cl/wp-content/uploads/2022/08/cancha-de-padel-panoramica.jpg);
+  }
+
+  .header_pistas .card__image--record {
+    background-image: url(https://unsplash.it/800/600?image=39);
+  }
+
+  .header_pistas .card__image--tenis {
+    background-image: url(https://s3.ppllstatics.com/canarias7/www/multimedia/202108/03/media/Canchas%20Tenis%20Lopez%20Socas%201.jpg);
+  }
+
+  .header_pistas .card__title {
+    color: @gray-dark;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .header_pistas .card__text {
+    flex: 1 1 auto;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+

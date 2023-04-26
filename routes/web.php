@@ -14,8 +14,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Home');
 });
+
+Route::get('/home','App\Http\Controllers\HomeController@index')->name('home');
+
+Route::get('/logout', function () {
+    Auth::logout();
+    return view('Home');
+});
+
+Route::get('/profile', 'App\Http\Controllers\ProfileController@index')->name('profile');
+
+Route::get('/pistas', 'App\Http\Controllers\PistasController@index')->name('pistas');
+
+Route::get('/eventos', 'App\Http\Controllers\EventosController@index')->name('eventos');
+
+Route::get('/circuitos', 'App\Http\Controllers\CircuitosController@index')->name('circuitos');
 
 Route::middleware([
     'auth:sanctum',
