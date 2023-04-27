@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    
-<!--Head-->
-@extends('layouts.head')
-@section('head_content')
-@endsection
-
 <head>
     <link media="all" type="text/css" rel="stylesheet" href="{{ asset('/css/pistas.css') }}"> 
 </head>
