@@ -21,6 +21,16 @@
     margin-left: 16rem;
 }
 
+.boton-reserva{
+    align-items: center;
+    margin-left: 85vh;
+}
+
+.video-container{
+    align-items: center !important;
+    margin-left: 20rem;
+    margin-bottom: 5rem;
+}
 /*
 *
 * ==========================================

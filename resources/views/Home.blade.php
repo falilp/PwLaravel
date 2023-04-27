@@ -34,7 +34,7 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
             <div class="container py-5 text-center">
                 <h1 class="display-4 font-weight-bold">Instalaciones deportivas KMB</h1>
                 <p class="font-italic mb-0">¡Prepárate para la aventura deportiva definitiva con KMB! Nuestras pistas deportivas están diseñadas para desafiar tus habilidades y mantenerte en movimiento. Ya seas un profesional o un principiante, ¡tenemos todo lo que necesitas para disfrutar de una experiencia deportiva inolvidable! ¡Únete a nosotros y comienza la acción hoy mismo!</p>
-                <a href="#" role="button" class="btn btn-primary px-5">Reserva ahora</a>
+                <a href="{{ route('pistas') }}" role="button" class="btn btn-primary px-5">Reserva ahora</a>
             </div>
     </div>
         </div>
@@ -43,7 +43,7 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
                 <div class="container py-5 text-center">
                     <h1 class="display-4 font-weight-bold">Ahora Circuitos Karting KMB</h1>
                     <p class="font-italic mb-0">¡No te pierdas la oportunidad de sentir la adrenalina y la emoción mientras conduces en nuestro circuito de Karting! ¡Inscríbete ahora y vive una experiencia que nunca olvidarás!</p>
-                    <a href="#" role="button" class="btn btn-primary px-5">Reserva ahora</a>
+                    <a href="{{ route('circuitos') }}" role="button" class="btn btn-primary px-5">Reserva ahora</a>
                 </div>
         </div>
     </div>
@@ -57,6 +57,33 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
     </a>
 </div>
     <!-- /end Carousel 100% Fullscreen -->
+    <div class="container py-5">
+    <h2 class="h3 font-weight-bold">¿Quienes somos?</h2>
+    <div class="row">
+        <div class="col-lg-10 mb-4">
+            <p class="font-italic text-muted">Bienvenido/a a KMB, un portal especializado en el alquiler de instalaciones deportivas. En nuestra página, encontrarás una amplia variedad de instalaciones deportivas disponibles para alquilar en diferentes zonas de la ciudad.</p>
+            <p class="font-italic text-muted">Nuestro objetivo es ofrecer una plataforma fácil de usar y accesible para que cualquier persona pueda encontrar y reservar rápidamente la instalación deportiva que necesita para su actividad física o deportiva. Entre las instalaciones que ofrecemos se encuentran canchas de fútbol, baloncesto, tenis, pádel, así como gimnasios, piscinas, pistas de atletismo y mucho más.</p>
+            <p class="font-italic text-muted">En KMB, nos aseguramos de que las instalaciones deportivas estén en excelentes condiciones, limpias y seguras para que nuestros usuarios puedan disfrutar de su actividad deportiva sin preocupaciones. Además, ofrecemos precios competitivos y opciones flexibles de reserva para adaptarnos a las necesidades de nuestros clientes.</p>
+            <p class="font-italic text-muted">Si estás buscando una instalación deportiva de calidad para practicar tu deporte favorito, no dudes en visitar nuestro portal KMB. Estamos seguros de que encontrarás lo que necesitas y disfrutarás de una experiencia deportiva única.</p>
+        </div>
+        <div class="col-lg-8">
+            <p class="font-italic text-muted"></p>
+        </div>
+    </div>
+    <div class="container py-5">
+    <h2 class="h3 font-weight-bold">Nos encontramos en:</h2>
+    <div class="row">
+        <div class="col-lg-10 mb-4">
+        </div>
+        <div class="col-lg-8">
+            <p class="font-italic text-muted"></p>
+        </div>
+    </div>
+    <div class="video-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51268.463559981545!2d-6.218797338378909!3d36.57149459917553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dd011d731c25b%3A0x929c66b8e1876e00!2sEl%20Puerto%20de%20Sta%20Mar%C3%ADa%2C%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1682624525583!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
 </body>
 
 <!--Footer -->

@@ -14,11 +14,10 @@
 
 <body>
 <!-- Bootstrap Static Header -->
-<div style="background: url(https://pland-architects.com/wp-content/uploads/2019/11/City-Mall-Karting-Track.jpg)" class="jumbotron bg-cover text-white">
+<div style="background: url(https://www.solvetic.com/uploads/monthly_12_2020/tutorials-7463-0-90036300-1606988329.png)" class="jumbotron bg-cover text-white">
     <div class="container py-5 text-center">
         <h1 class="display-4 font-weight-bold">Circuitos Karting KMB</h1>
         <p class="font-italic mb-0">¡No te pierdas la oportunidad de sentir la adrenalina y la emoción mientras conduces en nuestro circuito de Karting! ¡Inscríbete ahora y vive una experiencia que nunca olvidarás!</p>
-        <a href="#" role="button" class="btn btn-primary px-5">Reserva ahora</a>
     </div>
 </div>
 
@@ -34,6 +33,24 @@
             <p class="font-italic text-muted"></p>
         </div>
     </div>
+</div>
+<div class="boton-reserva">
+    <a href="#" role="button" class="btn btn-dark">Reserva ahora</a>
+</div>
+
+<div class="container py-5">
+    <h2 class="h3 font-weight-bold">Nuestros Karts</h2>
+    <div class="row">
+        <div class="col-lg-10 mb-4">
+            <p class="font-italic text-muted"> Si eres un amante de las emociones fuertes, entonces este es el lugar perfecto para ti. Nuestra pista está diseñada para desafiar tus habilidades de conducción y hacerte sentir la emoción de la velocidad mientras te deslizas por las curvas.</p>
+        </div>
+        <div class="col-lg-8">
+            <p class="font-italic text-muted"></p>
+        </div>
+    </div>
+</div>
+<div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2mTDjaZEp_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 <div class="container py-5">
