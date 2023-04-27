@@ -13,16 +13,25 @@
     <img src="..\public\img\fondoBlanco.png">
     <div class="header_pistas">
 
-    <h1>Pistas</h1>
+    <div class="container py-5">
+    <h2 class="h3 font-weight-bold">Instalaciones Deportivas KMB</h2>
+    <div class="row">
+        <div class="col-lg-10 mb-4">
+            <p class="font-italic text-muted"><strong>¡Alquila nuestras instalaciones deportivas y vive una experiencia única!</strong> En KMB, contamos con una amplia variedad de espacios deportivos de alta calidad para que puedas disfrutar de tus deportes favoritos con tus amigos, familiares o compañeros de equipo. Además, nuestros precios son muy competitivos y ofrecemos flexibilidad en horarios y opciones de alquiler. ¡No te pierdas la oportunidad de reservar tu espacio y vivir una experiencia deportiva inolvidable en KMB!</p>
+            <div class="col-lg-8">
+            <p class="font-italic text-muted">Reserva ahora:</p>
+        </div>
+    </div>
+</div>
 
     <ul class="cards">
     <li class="cards__item">
         <div class="card">
         <div class="card__image card__image--f11"></div>
         <div class="card__content">
-            <div class="card__title">Pistas Fútbol 11</div>
-            <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
-            <button class="btn btn--block card__btn">Button</button>
+            <div class="h5 font-weight-bold">Pistas Fútbol 11</div>
+            <p class="font-italic text-muted">Nuestras pistas de fútbol 11 cuentan con las medidas reglamentarias y están diseñadas para brindarte una experiencia de juego excepcional. El césped artificial de alta calidad permite un buen control del balón y una mejor amortiguación en los impactos, lo que te permitirá jugar cómodamente durante horas. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos.</p>
+            <button type="button" class="btn btn-dark">Reserva</button>
         </div>
         </div>
     </li>
@@ -30,9 +39,9 @@
         <div class="card">
         <div class="card__image card__image--f7"></div>
         <div class="card__content">
-            <div class="card__title">Pistas Fútbol 7</div>
-            <p class="card__text">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
-            <button class="btn btn--block card__btn">Button</button>
+            <div class="h5 font-weight-bold">Pistas Fútbol 7</div>
+            <p class="font-italic text-muted">En KMB, también contamos con pistas de fútbol 7 para que puedas disfrutar de este deporte con tus amigos o compañeros de equipo. Al igual que nuestras pistas de fútbol 11, nuestras pistas de fútbol 7 cuentan con césped artificial de alta calidad y medidas reglamentarias. Las pistas están diseñadas para que puedas disfrutar de partidos emocionantes y divertidos en un ambiente seguro y controlado.</p>
+            <button type="button" class="btn btn-dark">Reserva</button>
         </div>
         </div>
     </li>
@@ -41,9 +50,9 @@
         <div class="card">
         <div class="card__image card__image--fs"></div>
         <div class="card__content">
-            <div class="card__title">Pistas Fútbol sala</div>
-            <p class="card__text">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means "look at my width or height property."</p>
-            <button class="btn btn--block card__btn">Button</button>
+            <div class="h5 font-weight-bold">Pistas Fútbol sala</div>
+            <p class="font-italic text-muted">Para los amantes del fútbol sala, en KMB tenemos pistas especialmente diseñadas para este deporte. Nuestras pistas cuentan con una superficie de parqué y las medidas reglamentarias para que puedas jugar como un profesional. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos.</p>
+            <button type="button" class="btn btn-dark">Reserva</button>
         </div>
         </div>
     </li>
@@ -52,9 +61,9 @@
         <div class="card">
         <div class="card__image card__image--bal"></div>
         <div class="card__content">
-            <div class="card__title">Pista Baloncesto</div>
-            <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
-            <button class="btn btn--block card__btn">Button</button>
+            <div class="h5 font-weight-bold">Pista Baloncesto</div>
+            <p class="font-italic text-muted">En KMB, también contamos con pistas de baloncesto para que puedas practicar este deporte con tus amigos o compañeros de equipo. Nuestras pistas cuentan con una superficie de parqué y las medidas reglamentarias para que puedas disfrutar de partidos emocionantes y divertidos. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos. </p>
+            <button type="button" class="btn btn-dark">Reserva</button>
         </div>
         </div>
     </li>
@@ -62,9 +71,9 @@
         <div class="card">
         <div class="card__image card__image--padel"></div>
         <div class="card__content">
-            <div class="card__title">Pista Pádel</div>
-            <p class="card__text">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
-            <button class="btn btn--block card__btn">Button</button>
+            <div class="h5 font-weight-bold">Pista Pádel</div>
+            <p class="font-italic text-muted">Si prefieres el pádel, en KMB también contamos con pistas especialmente diseñadas para este deporte. Nuestras pistas cuentan con superficie de césped artificial de alta calidad y las medidas reglamentarias. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos.</p>
+            <button type="button" class="btn btn-dark">Reserva</button>
         </div>
         </div>
     </li>
@@ -73,9 +82,9 @@
         <div class="card">
         <div class="card__image card__image--tenis"></div>
         <div class="card__content">
-            <div class="card__title">Pista Tenis</div>
-            <p class="card__text">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means "look at my width or height property."</p>
-            <button class="btn btn--block card__btn">Button</button>
+            <div class="h5 font-weight-bold">Pista Tenis</div>
+            <p class="font-italic text-muted">En KMB, ofrecemos pistas de tenis para que puedas disfrutar de este deporte en un ambiente cómodo y seguro. Nuestras pistas cuentan con superficie de césped artificial de alta calidad y las medidas reglamentarias. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos.</p>
+            <button type="button" class="btn btn-dark">Reserva</button>
         </div>
         </div>
     </li>

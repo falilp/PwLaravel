@@ -48,19 +48,6 @@
     font-weight: bold;
   }
 
-  .header_pistas .btn {
-    background-color: white;
-    border: 1px solid @gray-light;
-    //border-radius: 1rem;
-    color: @gray-dark;
-    padding: 0.5rem;
-    text-transform: lowercase;
-  }
-
-  .header_pistas .btn--block {
-    display: block;
-    width: 100%;
-  }
   
   .header_pistas .cards {
     display: flex;
@@ -167,4 +154,3 @@
     line-height: 1.5;
     margin-bottom: 1.25rem;
   }
-
