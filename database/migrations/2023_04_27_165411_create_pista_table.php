@@ -12,7 +12,6 @@ return new class extends Migration{
         Schema::create('pista', function (Blueprint $table) {
             //$table->id();
             $table->increments('codPista');
-            //$table->foreign('codPista')->references('codEvento')->on('evento');
             $table->smallInteger('tipoPista',false);
             $table->smallInteger('precioHora',false);
             $table->boolean('disponible');

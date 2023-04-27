@@ -12,7 +12,7 @@ return new class extends Migration{
         Schema::create('evento', function (Blueprint $table){
             //$table->id();
             $table->increments('codEvento');
-            $table->unsignedBigInteger('codPista');
+            $table->integer('codPista')->unsigned();
             $table->dateTime('FechaEvento');
             $table->string('Descripcion',150);
             $table->char('categoria',30);
