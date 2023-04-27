@@ -9,7 +9,17 @@
     background-size: cover !important;
 }
 
+.container-img img{
+    align-items: center !important;
+    height: 60%;
+    width: 60%;
+    margin-left: 20rem;
+    margin-bottom: 5rem;
+}
 
+.container-img h3{
+    margin-left: 16rem;
+}
 
 /*
 *
@@ -19,7 +29,5 @@
 *
 */
 
-body {
-    min-
 /**/
 

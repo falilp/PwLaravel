@@ -11,38 +11,80 @@
 @section('nav_content')
 @endsection
 
-<body>
+
 <body>
 <!-- Bootstrap Static Header -->
 <div style="background: url(https://pland-architects.com/wp-content/uploads/2019/11/City-Mall-Karting-Track.jpg)" class="jumbotron bg-cover text-white">
     <div class="container py-5 text-center">
         <h1 class="display-4 font-weight-bold">Circuitos Karting KMB</h1>
-        <p class="font-italic mb-0">Using simple jumbotron-style component, create a nice Bootstrap 4 header with a background image.</p>
-        <p class="font-italic">Snippe by
-            <a href="https://bootstrapious.com" class="text-white">
-                <u>Bootstrapious</u>
-            </a>
-        </p>
-        <a href="#" role="button" class="btn btn-primary px-5">See All Features</a>
+        <p class="font-italic mb-0">¡No te pierdas la oportunidad de sentir la adrenalina y la emoción mientras conduces en nuestro circuito de Karting! ¡Inscríbete ahora y vive una experiencia que nunca olvidarás!</p>
+        <a href="#" role="button" class="btn btn-primary px-5">Reserva ahora</a>
     </div>
 </div>
 
 <!-- For Demo Purpose -->
 <div class="container py-5">
-    <h2 class="h3 font-weight-bold">Some demo content</h2>
+    <h2 class="h3 font-weight-bold">¡Bienvenidos a nuestro circuito de Karting lleno de adrenalina y rapidez!</h2>
     <div class="row">
         <div class="col-lg-10 mb-4">
-            <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-            <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+            <p class="font-italic text-muted"> Si eres un amante de las emociones fuertes, entonces este es el lugar perfecto para ti. Nuestra pista está diseñada para desafiar tus habilidades de conducción y hacerte sentir la emoción de la velocidad mientras te deslizas por las curvas.</p>
+            <p class="font-italic text-muted">Ya sea que estés buscando una forma emocionante de pasar el tiempo con tus amigos o una actividad divertida para una despedida de soltero/a o una fiesta de cumpleaños, nuestro circuito de Karting es la elección perfecta. Ven y disfruta de la emoción y la rapidez en nuestra pista de Karting.</p>
         </div>
         <div class="col-lg-8">
-            <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur <strong class="font-weight-bold text-dark">adipisicing elit, sed </strong>do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in <strong class="font-weight-bold text-dark">reprehenderit in voluptate </strong>velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="font-italic text-muted"></p>
         </div>
     </div>
 </div>
+
+<div class="container py-5">
+    <h2 class="h3 font-weight-bold">WindyCurveKarting</h2>
+    <div class="row">
+        <div class="col-lg-10 mb-4">
+            <p class="font-italic text-muted">Nuestra <strong>WindyCurveKarting</strong>, pista de kart abierta, está diseñada para ofrecer una experiencia de carreras emocionante y segura para todos los niveles de habilidad. Dispone de:</p>
+            <ul class="font-italic text-muted">
+                <li>Curvas desafiantes</li>
+                <li>Rectas de alta velocidad</li>
+                <li>Sistemas de iluminación y cronometraje</li>
+                <li>Barreras de seguridad, </li>
+            </ul>
+            <p class="font-italic text-muted">KMB es el lugar perfecto para disfrutar de la emoción de las carreras de karts en un ambiente divertido y acogedor. <strong>¡Únete a nosotros hoy y vive la adrenalina de la velocidad en KMB!</strong></p>
+        </div>
+        <div class="col-lg-8">
+            <p class="font-italic text-muted"></p>
+        </div>
+    </div>
+</div>
+<div class="container-img">
+    <img src="https://s1.eestatic.com/2021/12/24/malaga/vivir/637196374_218596164_1706x960.jpg">
+</div>
+
+<div class="container py-5">
+    <h2 class="h3 font-weight-bold">SpeedFactory Indoor Karting</h2>
+    <div class="row">
+        <div class="col-lg-10 mb-4">
+            <p class="font-italic text-muted"><strong>¡Bienvenidos a SpeedFactory Indoor Karting, la pista de karting cubierta más emocionante de la ciudad!</strong>Nuestra instalación de última generación cuenta con:</p>
+            <ul class="font-italic text-muted">
+                <li>Una pista de carreras de alta velocidad</li>
+                <li>Diseño único que ofrece una experiencia emocionante y desafiante para los conductores de todos los niveles.</li>
+                <li>sistema de cronometraje y puntuación en vivo</li>
+                <li>Barreras de seguridad</li>
+            </ul>
+            <p class="font-italic text-muted">Tú y tus amigos pueden competir por los mejores tiempos y la gloria de ser los campeones de SpeedFactory. </p>
+        </div>
+        <div class="col-lg-8">
+            <p class="font-italic text-muted"></p>
+        </div>
+    </div>
+</div>
+<div class="container-img">
+    <img src="https://pland-architects.com/wp-content/uploads/2019/11/City-Mall-Karting-Track.jpg">
+</div>
+
+
+
 </body> 
     
-</body>
+
 
 <!--Footer -->
     @extends('layouts.footer')
