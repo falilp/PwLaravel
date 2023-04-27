@@ -17,6 +17,24 @@
                     <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('pistas') }}">Pistas</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('eventos') }}">Eventos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('circuitos') }}">Circuitos</a>
+                    </li>
+
+                    @if (Auth::check())
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('profile') }}">Perfil</a>
+                        </li>
+                    @endif
+
                     @if (Auth::check())
                         <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}">Cerrar Sesion</a>
