@@ -41,7 +41,7 @@
         <div class="card__content">
             <div class="h5 font-weight-bold">Pistas Fútbol 7</div>
             <p class="font-italic text-muted">En KMB, también contamos con pistas de fútbol 7 para que puedas disfrutar de este deporte con tus amigos o compañeros de equipo. Al igual que nuestras pistas de fútbol 11, nuestras pistas de fútbol 7 cuentan con césped artificial de alta calidad y medidas reglamentarias. Las pistas están diseñadas para que puedas disfrutar de partidos emocionantes y divertidos en un ambiente seguro y controlado.</p>
-            <a href="{{ route('alquiler') }}"><button type="button" class="btn btn-dark">Reserva</button></a>
+            <a href="{{ route('alquiler', ['codPista' => '1']) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
         </div>
         </div>
     </li>
@@ -52,7 +52,7 @@
         <div class="card__content">
             <div class="h5 font-weight-bold">Pistas Fútbol sala</div>
             <p class="font-italic text-muted">Para los amantes del fútbol sala, en KMB tenemos pistas especialmente diseñadas para este deporte. Nuestras pistas cuentan con una superficie de parqué y las medidas reglamentarias para que puedas jugar como un profesional. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos.</p>
-            <a href="{{ route('alquiler') }}"><button type="button" class="btn btn-dark">Reserva</button></a>
+            <a href="{{ route('alquiler', ['codPista' => '2']) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
         </div>
         </div>
     </li>
@@ -63,7 +63,7 @@
         <div class="card__content">
             <div class="h5 font-weight-bold">Pista Baloncesto</div>
             <p class="font-italic text-muted">En KMB, también contamos con pistas de baloncesto para que puedas practicar este deporte con tus amigos o compañeros de equipo. Nuestras pistas cuentan con una superficie de parqué y las medidas reglamentarias para que puedas disfrutar de partidos emocionantes y divertidos. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos. </p>
-            <a href="{{ route('alquiler') }}"><button type="button" class="btn btn-dark">Reserva</button></a>
+            <a href="{{ route('alquiler', ['codPista' => '3']) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
         </div>
         </div>
     </li>
@@ -73,7 +73,7 @@
         <div class="card__content">
             <div class="h5 font-weight-bold">Pista Pádel</div>
             <p class="font-italic text-muted">Si prefieres el pádel, en KMB también contamos con pistas especialmente diseñadas para este deporte. Nuestras pistas cuentan con superficie de césped artificial de alta calidad y las medidas reglamentarias. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos.</p>
-            <a href="{{ route('alquiler') }}"><button type="button" class="btn btn-dark">Reserva</button></a>
+            <a href="{{ route('alquiler', ['codPista' => '5']) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
         </div>
         </div>
     </li>
@@ -84,7 +84,7 @@
         <div class="card__content">
             <div class="h5 font-weight-bold">Pista Tenis</div>
             <p class="font-italic text-muted">En KMB, ofrecemos pistas de tenis para que puedas disfrutar de este deporte en un ambiente cómodo y seguro. Nuestras pistas cuentan con superficie de césped artificial de alta calidad y las medidas reglamentarias. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos.</p>
-            <a href="{{ route('alquiler') }}"><button type="button" class="btn btn-dark">Reserva</button></a>
+            <a href="{{ route('alquiler', ['codPista' => '4']) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
         </div>
         </div>
     </li>
