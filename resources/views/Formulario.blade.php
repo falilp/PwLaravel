@@ -14,7 +14,7 @@
     <div class="header_pistas">
 
     <div class="container py-5">
-    <h2 class="h3 font-weight-bold">Formulario Reserva Pistas: @$codPista</h2>
+    <h2 class="h3 font-weight-bold">Formulario Reserva Pistas: {{ $codPista }}</h2>
     <div class="row">
         <div class="col-lg-10 mb-4">
             <p class="font-italic text-muted"><strong>Rellena el formulario para completar la reserva</strong></p>
