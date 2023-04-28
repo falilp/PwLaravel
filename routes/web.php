@@ -32,6 +32,9 @@ Route::get('/eventos', 'App\Http\Controllers\EventosController@index')->name('ev
 
 Route::get('/circuitos', 'App\Http\Controllers\CircuitosController@index')->name('circuitos');
 
+Route::get('/pistas/alquiler/nuevo/{codPista}', 'App\Http\Controllers\AlquilerController@index')->name('alquiler');
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
