@@ -17,7 +17,7 @@ class AlquilerController extends Controller
         La idea es, el usuario selecciona una de las pistas para alquilar por lo tanto la funcion mostrar_huecos recibe el codigo de pista
         hace una peticion a la base de datos y muestra los huecos disponibles al usuario
     */
-    public function index($codPista){
+    public function index(Request $request, $codPista){
         return view('formulario')->with(['codPista' => $codPista]);
     }
     public function mostrar_huecos($codPista){

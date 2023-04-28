@@ -31,7 +31,7 @@
         <div class="card__content">
             <div class="h5 font-weight-bold">Pistas Fútbol 11</div>
             <p class="font-italic text-muted">Nuestras pistas de fútbol 11 cuentan con las medidas reglamentarias y están diseñadas para brindarte una experiencia de juego excepcional. El césped artificial de alta calidad permite un buen control del balón y una mejor amortiguación en los impactos, lo que te permitirá jugar cómodamente durante horas. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos.</p>
-            <a href="{{ route('alquiler', ['codPista' => 0]) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
+            <a href="{{ route('alquiler', ['codPista' => '0']) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
         </div>
         </div>
     </li>
