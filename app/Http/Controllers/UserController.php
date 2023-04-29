@@ -12,7 +12,8 @@ class UserController extends Controller{
         return view('auth.register');
     }
     public function register(RegisterRequest $request){
-        usuarios::created($request->validated());
+        $user = usuarios::create($request->validated());
+        return redirect('/home');
     }
 
     public function showLogin(){

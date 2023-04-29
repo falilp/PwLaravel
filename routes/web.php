@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,7 @@ Route::get('/circuitos', 'App\Http\Controllers\CircuitosController@index')->name
 Route::get('/pistas/alquiler/nuevo/{codPista}', 'App\Http\Controllers\AlquilerController@index')->name('alquiler');
 
 Route::get('/registro', 'App\Http\Controllers\UserController@showRegister')->name('registro');
+Route::post('/registro', [UserController::class,'register'])->name('registro');
 
 Route::get('/login', 'App\Http\Controllers\UserController@showLogin')->name('login');
 

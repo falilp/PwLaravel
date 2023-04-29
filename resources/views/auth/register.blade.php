@@ -23,48 +23,52 @@
 2. You can align image position in classes bg1, bg2, bg3 using css background-position.
 http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
 -->
-<x-authentication-card>
-        <x-slot name="logo">
+<authentication-card>
+        <slot name="logo">
             
-        </x-slot>
+        </slot>
         
-        <x-validation-errors class="mb-4" />
+        <validation-errors class="mb-4" />
         </br></br>
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('registro') }}">
             <h3>Registro de Usuario</h3>
             @csrf
 
             <div>
-                <x-label for="name" value="{{ __('Nombre') }}" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="nombre" :value="old('nombre')" required autofocus autocomplete="nombre" />
+                <label for="nombre" value="{{ __('Nombre') }}">Nombre</label>
+                <input id="nombre" class="block mt-1 w-full" type="text" name="nombre" :value="old('nombre')" required autofocus autocomplete="nombre" />
             </div>
 
             <div>
-                <x-label for="name" value="{{ __('Apellidos') }}" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="apellidos" :value="old('apellidos')" required autofocus autocomplete="apellidos" />
+                <label for="apellidos" value="{{ __('Apellidos') }}">Apellidos</label>
+                <input id="apellidos" class="block mt-1 w-full" type="text" name="apellidos" :value="old('apellidos')" required autofocus autocomplete="apellidos" />
             </div>
 
             <div class="mt-4">
-                <x-label for="email" value="{{ __('Teléfono') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="text" name="telefono" :value="old('telefono')" required autocomplete="telefono" />
+                <label for="telefono" value="{{ __('Teléfono') }}">Teléfono</label>
+                <input id="telefono" class="block mt-1 w-full" type="number" name="telefono" :value="old('telefono')" required autocomplete="telefono" />
             </div>
 
             <div class="mt-4">
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="email" />
+                <label for="email" value="{{ __('Email') }}">Email</label>
+                <input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="email" />
             </div>
 
             <div class="mt-4">
-                <x-label for="password" value="{{ __('Contraseña') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="contraseña" required autocomplete="new-password" />
+                <input id="Permisos" class="block mt-1 w-full" value=0 type="hidden" name="Permisos" required autocomplete="Permisos"  />
             </div>
 
             <div class="mt-4">
-                <x-label for="password_confirmation" value="{{ __('Confirmar Contraseña') }}" />
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="confirmar_contraseña" required autocomplete="new-password" />
+                <label for="password" value="{{ __('Contraseña') }}">Contraseña</label>
+                <input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
 
-            @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
+            <div class="mt-4">
+                <label for="password_confirm" value="{{ __('Confirmar Contraseña') }}">Confirmar Contraseña</label>
+                <input id="password_confirm" class="block mt-1 w-full" type="password" name="password_confirm" required autocomplete="new-password" />
+            </div>
+
+            <!--@if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">
                     <x-label for="terms">
                         <div class="flex items-center">
@@ -79,19 +83,19 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
                         </div>
                     </x-label>
                 </div>
-            @endif
+            @endif-->
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                     {{ __('¿Estas ya registrado?') }}
                 </a>
 
-                <x-button class="ml-4">
+                <x-button class="ml-4" style="background-color:blue; border-color:black;">
                     {{ __('Registrarse') }}
                 </x-button>
             </div>
         </form>
-</x-authentication-card>
+</authentication-card>
 </body>
 
 <!--Footer -->

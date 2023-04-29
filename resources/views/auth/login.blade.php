@@ -67,7 +67,7 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
                 {{ __('registro') }}
             </a>
 
-            <x-button class="ml-4">
+            <x-button class="ml-4"  style="background-color:blue; border-color:black;">
                 {{ __('Iniciar sesión') }}
             </x-button>
         </div>
