@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <title>Formulario</title>
     <link media="all" type="text/css" rel="stylesheet" href="{{ asset('/css/pistas.css') }}"> 
 </head>
 

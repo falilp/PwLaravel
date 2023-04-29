@@ -34,9 +34,9 @@ Route::get('/circuitos', 'App\Http\Controllers\CircuitosController@index')->name
 
 Route::get('/pistas/alquiler/nuevo/{codPista}', 'App\Http\Controllers\AlquilerController@index')->name('alquiler');
 
-Route::get('/register', 'App\Http\Controllers\UserController@register')->name('registro');
+Route::get('/registro', 'App\Http\Controllers\UserController@showRegister')->name('registro');
 
-Route::get('/login', 'App\Http\Controllers\UserController@login')->name('login');
+Route::get('/login', 'App\Http\Controllers\UserController@showLogin')->name('login');
 
 
 Route::middleware([
