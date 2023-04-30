@@ -36,7 +36,12 @@
     </div>
 </div>
 <div class="boton-reserva">
-    <a href="#" role="button" class="btn btn-dark">Reserva ahora</a>
+@if (Auth::check())
+        <a href="#" role="button" class="btn btn-dark">Reserva ahora</a>
+    @else
+        <a href="{{ route('login') }}"><button type="button" class="btn btn-dark">Registrate</button></a>
+        <p class="font-italic text-muted">Registrate para poder acceder a la reserva de pistas</p>
+    @endif
 </div>
 
 <div class="container py-5">
