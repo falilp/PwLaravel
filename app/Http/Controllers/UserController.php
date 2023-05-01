@@ -26,7 +26,7 @@ class UserController extends Controller{
         $credenciales = $request->getCredentials();
 
         if(!Auth::validate($credenciales)){
-            return redirect('/login');//->withErrors('auth.failed');
+            return redirect()->to('/login')->withErrors('auth.failed');
         }
 
         $usuario = Auth::getProvider()->retrieveByCredentials($credenciales);

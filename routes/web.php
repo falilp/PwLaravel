@@ -41,7 +41,7 @@ Route::post('/registro', [UserController::class,'register'])->name('registro');
 
 Route::get('/login', 'App\Http\Controllers\UserController@showLogin')->name('login');
 Route::post('/login', [UserController::class,'login'])->name('login');
-
+//Route::post('/login',function(){return request('nombre');});
 
 Route::middleware([
     'auth:sanctum',

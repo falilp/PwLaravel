@@ -38,14 +38,12 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
         @csrf
 
         <div>
-            <br>
-            <label for="nombre" value="{{ __('Nombre') }}">Nombre/Email</label>
+            <label for="nombre" value="{{ __('nombre') }}">Nombre/Email</label>
             <input id="nombre" class="block mt-1 w-full" type="text" name="nombre" :value="old('nombre')" required autofocus autocomplete="nombre" />
-            <br>
         </div>
 
         <div class="mt-4">
-        <label for="password" value="{{ __('Contraseña') }}">Contraseña</label>
+            <label for="password" value="{{ __('password') }}">Contraseña</label>
             <input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password"/>
         </div>
 

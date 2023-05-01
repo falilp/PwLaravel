@@ -20,13 +20,13 @@ class LoginRequest extends FormRequest{
      */
     public function rules(): array{
         return [
-            'email' => 'required',
-            'password' => 'required',
+            'nombre' => 'required',
+            'password' => 'required'
         ];
     }
 
     public function getCredentials(){
-        $nombre = $this->get('email');
+        $nombre = $this->get('nombre');
 
         if($this->ComprobarEmail($nombre)){
             return [
@@ -40,6 +40,6 @@ class LoginRequest extends FormRequest{
     public function ComprobarEmail($value){
         $factory = $this->container->make(ValidationFactory::class);
         
-        return $factory->make(['nombre' => $value], ['nombre' => 'email'])->fails();
+        return !$factory->make(['nombre' => $value], ['nombre' => 'email'])->fails();
     }
 }

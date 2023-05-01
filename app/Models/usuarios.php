@@ -15,6 +15,8 @@ class usuarios extends Model{
     use Notifiable;
     //use TwoFactorAuthenticatable;
 
+    protected $table = 'usuarios';
+
     protected $fillable = ['nombre', 'apellidos', 'email', 'telefono', 'password', 'Permisos'];
     protected $hidden = ['password','Permisos'];
 
