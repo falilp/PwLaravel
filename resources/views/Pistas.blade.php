@@ -20,7 +20,12 @@
         <div class="col-lg-10 mb-4">
             <p class="font-italic text-muted"><strong>¡Alquila nuestras instalaciones deportivas y vive una experiencia única!</strong> En KMB, contamos con una amplia variedad de espacios deportivos de alta calidad para que puedas disfrutar de tus deportes favoritos con tus amigos, familiares o compañeros de equipo. Además, nuestros precios son muy competitivos y ofrecemos flexibilidad en horarios y opciones de alquiler. ¡No te pierdas la oportunidad de reservar tu espacio y vivir una experiencia deportiva inolvidable en KMB!</p>
             <div class="col-lg-8">
-            <p class="font-italic text-muted">Reserva ahora:</p>
+            @if (Auth::check())
+                <p class="font-italic text-muted">Reserva ahora:</p>
+            @else
+                <a href="{{ route('login') }}"><button type="button" class="btn btn-dark">Inicia Sesion</button></a>
+                <p class="font-italic text-muted"> Inicia sesión para poder acceder a esta funcionalidad</p>
+            @endif
         </div>
     </div>
 </div>
@@ -32,12 +37,7 @@
         <div class="card__content">
             <div class="h5 font-weight-bold">Pistas Fútbol 11</div>
             <p class="font-italic text-muted">Nuestras pistas de fútbol 11 cuentan con las medidas reglamentarias y están diseñadas para brindarte una experiencia de juego excepcional. El césped artificial de alta calidad permite un buen control del balón y una mejor amortiguación en los impactos, lo que te permitirá jugar cómodamente durante horas. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos.</p>
-            @if (Auth::check())
-                <a href="{{ route('alquiler', ['codPista' => '0']) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
-            @else
-                <a href="{{ route('login') }}"><button type="button" class="btn btn-dark">Registrate</button></a>
-                <p class="font-italic text-muted">Registrate para poder acceder a la reserva de pistas</p>
-            @endif
+            <a href="{{ route('alquiler', ['codPista' => '0', 'fecha' => now()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
         </div>
         </div>
     </li>
@@ -48,10 +48,7 @@
             <div class="h5 font-weight-bold">Pistas Fútbol 7</div>
             <p class="font-italic text-muted">En KMB, también contamos con pistas de fútbol 7 para que puedas disfrutar de este deporte con tus amigos o compañeros de equipo. Al igual que nuestras pistas de fútbol 11, nuestras pistas de fútbol 7 cuentan con césped artificial de alta calidad y medidas reglamentarias. Las pistas están diseñadas para que puedas disfrutar de partidos emocionantes y divertidos en un ambiente seguro y controlado.</p>
             @if (Auth::check())            
-                <a href="{{ route('alquiler', ['codPista' => '1']) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
-            @else
-                <a href="{{ route('login') }}"><button type="button" class="btn btn-dark">Registrate</button></a>
-                <p class="font-italic text-muted">Registrate para poder acceder a la reserva de pistas</p>
+                <a href="{{ route('alquiler', ['codPista' => '1', 'fecha' => now()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
             @endif
         </div>
         </div>
@@ -64,10 +61,7 @@
             <div class="h5 font-weight-bold">Pistas Fútbol sala</div>
             <p class="font-italic text-muted">Para los amantes del fútbol sala, en KMB tenemos pistas especialmente diseñadas para este deporte. Nuestras pistas cuentan con una superficie de parqué y las medidas reglamentarias para que puedas jugar como un profesional. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos.</p>
             @if (Auth::check())
-                <a href="{{ route('alquiler', ['codPista' => '2']) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
-            @else
-                <a href="{{ route('login') }}"><button type="button" class="btn btn-dark">Registrate</button></a>
-                <p class="font-italic text-muted">Registrate para poder acceder a la reserva de pistas</p>
+                <a href="{{ route('alquiler', ['codPista' => '2', 'fecha' => now()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
             @endif
         </div>
         </div>
@@ -80,10 +74,7 @@
             <div class="h5 font-weight-bold">Pista Baloncesto</div>
             <p class="font-italic text-muted">En KMB, también contamos con pistas de baloncesto para que puedas practicar este deporte con tus amigos o compañeros de equipo. Nuestras pistas cuentan con una superficie de parqué y las medidas reglamentarias para que puedas disfrutar de partidos emocionantes y divertidos. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos. </p>
             @if (Auth::check())
-                <a href="{{ route('alquiler', ['codPista' => '3']) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
-            @else
-                <a href="{{ route('login') }}"><button type="button" class="btn btn-dark">Registrate</button></a>
-                <p class="font-italic text-muted">Registrate para poder acceder a la reserva de pistas</p>
+                <a href="{{ route('alquiler', ['codPista' => '3', 'fecha' => now()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
             @endif
         </div>
         </div>
@@ -95,10 +86,7 @@
             <div class="h5 font-weight-bold">Pista Pádel</div>
             <p class="font-italic text-muted">Si prefieres el pádel, en KMB también contamos con pistas especialmente diseñadas para este deporte. Nuestras pistas cuentan con superficie de césped artificial de alta calidad y las medidas reglamentarias. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos.</p>
             @if (Auth::check())
-                <a href="{{ route('alquiler', ['codPista' => '5']) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
-            @else
-                <a href="{{ route('login') }}"><button type="button" class="btn btn-dark">Registrate</button></a>
-                <p class="font-italic text-muted">Registrate para poder acceder a la reserva de pistas</p>
+                <a href="{{ route('alquiler', ['codPista' => '5', 'fecha' => now()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
             @endif
         </div>
         </div>
@@ -111,10 +99,7 @@
             <div class="h5 font-weight-bold">Pista Tenis</div>
             <p class="font-italic text-muted">En KMB, ofrecemos pistas de tenis para que puedas disfrutar de este deporte en un ambiente cómodo y seguro. Nuestras pistas cuentan con superficie de césped artificial de alta calidad y las medidas reglamentarias. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos.</p>
             @if (Auth::check())
-                <a href="{{ route('alquiler', ['codPista' => '4']) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
-            @else
-                <a href="{{ route('login') }}"><button type="button" class="btn btn-dark">Registrate</button></a>
-                <p class="font-italic text-muted">Registrate para poder acceder a la reserva de pistas</p>
+                <a href="{{ route('alquiler', ['codPista' => '4', 'fecha' => now()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
             @endif
         </div>
         </div>
@@ -123,10 +108,8 @@
     </ul>
     </div>
 </body>
-
 <!--Footer -->
     @extends('layouts.footer')
     @section('footer_content')
     @endsection
-    
 </html>

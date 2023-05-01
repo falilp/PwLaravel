@@ -102,12 +102,7 @@
 <div class="container-img">
     <img src="https://pland-architects.com/wp-content/uploads/2019/11/City-Mall-Karting-Track.jpg">
 </div>
-
-
-
 </body> 
-    
-
 
 <!--Footer -->
     @extends('layouts.footer')
