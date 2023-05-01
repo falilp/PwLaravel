@@ -25,6 +25,7 @@
             <p class="font-italic text-muted">Reserva ahora:</p>
 
     <form action="{{ route('alquiler.guardar_reserva') }}" method="POST">
+    @csrf
     <div class="container">        
         <div class="row">
             <div class="col-12">

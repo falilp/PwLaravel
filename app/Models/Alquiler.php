@@ -9,5 +9,5 @@ class Alquiler extends Model
 {
     use HasFactory;
     protected $table = 'pista';
-
+    protected $fillable = ['disponible'];
 }
