@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\usuarios;
 use App\Models\Alquiler;
-use Illuminate\Http\Request;
 use App\Http\Requests\guardarArticulo;
 
 class AlquilerController extends Controller
@@ -20,7 +19,7 @@ class AlquilerController extends Controller
         La idea es, el usuario selecciona una de las pistas para alquilar por lo tanto la funcion mostrar_huecos recibe el codigo de pista
         hace una peticion a la base de datos y muestra los huecos disponibles al usuario
     */
-    public function index(Request $request, $codPista, $fechaActual){
+    public function index($codPista, $fechaActual){
         $nomPista = 'null';
 
         if($codPista >= 0 && $codPista <= 7){
@@ -62,11 +61,11 @@ class AlquilerController extends Controller
         }
     }
 
-    public function guardar_reserva(){
+    public function guardar_reserva(guardarArticulo $request){
         $reservas = $_POST['reservas'];
         $pistas = Alquiler::all();
         foreach($reservas as $reserva){
-            $pistas->where('codPista', $reserva['codPista'])->update('disponible', '0');
+            $pistas->where('codPista', $reserva['codPista'])->update(['disponible' => '0']);
         }
     }
 }
