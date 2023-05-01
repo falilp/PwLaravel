@@ -17,13 +17,13 @@
 
 
 <body>
-    <img src="..\public\img\fondoBlanco.png">
+    <!--<img src="https://media.tenor.com/hgBwZv6uX-MAAAAd/que-miras-bobo.gif">-->
 <!-- TIPS: 
 1. The carousel shouldn't be in any other div, like for example div with class container. 
 2. You can align image position in classes bg1, bg2, bg3 using css background-position.
 http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
 -->
-
+<!-- style="background-image: url('https://media.tenor.com/hgBwZv6uX-MAAAAd/que-miras-bobo.gif');" MESSI-->
 <x-authentication-card>
     <x-slot name="logo">
     </x-slot>
@@ -39,14 +39,14 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
 
         <div>
             <br>
-            <x-label for="email" value="{{ __('Email') }}" />
-            <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username"/>
+            <label for="nombre" value="{{ __('Nombre') }}">Nombre/Email</label>
+            <input id="nombre" class="block mt-1 w-full" type="text" name="nombre" :value="old('nombre')" required autofocus autocomplete="nombre" />
             <br>
         </div>
 
         <div class="mt-4">
-            <x-label for="password" value="{{ __('Contraseña') }}" />
-            <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password"/>
+        <label for="password" value="{{ __('Contraseña') }}">Contraseña</label>
+            <input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password"/>
         </div>
 
         <!--<div class="block mt-4">
