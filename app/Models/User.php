@@ -17,30 +17,31 @@ class User extends Authenticatable
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
-    protected $table = 'usuarios';
+    protected $table = 'users';
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
-    protected $fillable = [
+    /*protected $fillable = [
         'name',
         'email',
         'password',
-    ];
+    ];*/
+    protected $fillable = ['nombre', 'apellidos', 'email', 'telefono', 'password', 'Permisos'];
 
     /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
      */
-    protected $hidden = [
+    /*protected $hidden = [
         'password',
         'remember_token',
         'two_factor_recovery_codes',
         'two_factor_secret',
-    ];
-
+    ];*/
+    protected $hidden = ['password','Permisos'];
     /**
      * The attributes that should be cast.
      *
@@ -58,4 +59,7 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+    public function setPasswordAttribute($value){
+        $this->attributes['password'] = bcrypt($value);
+    }
 }

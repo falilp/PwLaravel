@@ -20,6 +20,12 @@
         <div class="col-lg-10 mb-4">
             <p class="font-italic text-muted"><strong>¡Alquila nuestras instalaciones deportivas y vive una experiencia única!</strong> En KMB, contamos con una amplia variedad de espacios deportivos de alta calidad para que puedas disfrutar de tus deportes favoritos con tus amigos, familiares o compañeros de equipo. Además, nuestros precios son muy competitivos y ofrecemos flexibilidad en horarios y opciones de alquiler. ¡No te pierdas la oportunidad de reservar tu espacio y vivir una experiencia deportiva inolvidable en KMB!</p>
             <div class="col-lg-8">
+            <?php
+
+            use Illuminate\Support\Facades\Auth;
+
+            echo Auth::user();
+            ?>
             @if (Auth::check())
                 <p class="font-italic text-muted">Reserva ahora:</p>
             @else

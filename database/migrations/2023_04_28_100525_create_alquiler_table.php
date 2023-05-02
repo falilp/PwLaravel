@@ -12,12 +12,12 @@ class CreateAlquilerTable extends Migration{
         Schema::create('alquiler', function (Blueprint $table){
             //$table->id();
             $table->increments('codPista');
-            $table->integer('codUsuario')->unsigned();
+            $table->bigInteger('codUsuario')->unsigned();
             $table->dateTime('fecha_alquiler');
             $table->smallInteger('precio',false);
             $table->float('descuento');
             $table->foreign('codPista')->references('codPista')->on('pista');
-            $table->foreign('codUsuario')->references('codUsuario')->on('usuarios');
+            $table->foreign('codUsuario')->references('id')->on('users');
             $table->timestamps();
         });
     }
