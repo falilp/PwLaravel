@@ -12,7 +12,6 @@
 @section('nav_content')
 @endsection
 
-
 <body>
 <!-- Bootstrap Static Header -->
 <div style="background: url(https://www.solvetic.com/uploads/monthly_12_2020/tutorials-7463-0-90036300-1606988329.png)" class="jumbotron bg-cover text-white">
