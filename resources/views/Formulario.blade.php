@@ -17,13 +17,13 @@
     <div class="container py-5">
     <h2 class="h3 font-weight-bold">Formulario Reserva Pistas: {{ $nomPista }}</h2>
     <p class="font-italic text-muted"><strong>Rellena el formulario para completar la reserva</strong></p>
-    <a href="{{ route('alquiler', ['codPista' => $codPista, 'fecha' => Carbon\Carbon::parse($fecha)->addDay()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Anvanzar: {{ Carbon\Carbon::parse($fecha)->addDay()->format('Y-m-d') }}</button></a>
+    <a href="{{ route('alquiler', ['tipoPista' => $tipoPista, 'fecha' => Carbon\Carbon::parse($fecha)->addDay()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Anvanzar: {{ Carbon\Carbon::parse($fecha)->addDay()->format('Y-m-d') }}</button></a>
     <p class="font-italic text-muted">Reserva ahora:</p>
 
     <div class="col-lg-8">
     <div class="row">
     <div class="col-lg-10 mb-4">
-    <form action="{{ route('alquiler.guardar_reserva', ['codPista' => $codPista]) }}" method="">
+    <form action="{{ route('alquiler.guardar_reserva') }}" method="post">
     @csrf
     <div class="container">        
         <div class="row">
@@ -50,7 +50,7 @@
                                             <td>{{ date('H:i:s', strtotime($fila['HoraDisponible'] . '+30 minutes')) }}</td>
                                             <td>
                                             <label class="customcheckbox">
-                                                <input type="checkbox" class="listCheckbox" name="$fila['codPista']" value="{{ $fila['codPista'] }}">
+                                                <input type="checkbox" class="listCheckbox" name="reservas[$fila['codPista']]" value="{{ $fila['codPista'] }}">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </td>

@@ -17,11 +17,11 @@ class AlquilerController extends Controller
         La idea es, el usuario selecciona una de las pistas para alquilar por lo tanto la funcion mostrar_huecos recibe el codigo de pista
         hace una peticion a la base de datos y muestra los huecos disponibles al usuario
     */
-    public function index($codPista, $fechaActual){
+    public function index($tipoPista, $fechaActual){
         $nomPista = 'null';
 
-        if($codPista >= 0 && $codPista <= 7){
-            switch($codPista){
+        if($tipoPista >= 0 && $tipoPista <= 7){
+            switch($tipoPista){
                 case 0:{
                     $nomPista = "Futbol 11";
                 }break;
@@ -48,19 +48,19 @@ class AlquilerController extends Controller
                 }break;
             }
 
-            $huecos_pista = Alquiler::all()->where('tipoPista', $codPista);
+            $huecos_pista = Alquiler::all()->where('tipoPista', $tipoPista);
             $disponibles = $huecos_pista->where('disponible', '1');
             $disponiblesHoy = $disponibles->filter(function ($item) use ($fechaActual) {
                 return substr($item->HoraDisponible, 0, 10) == $fechaActual;
             });
-            return view('formulario')->with(['codPista' => $codPista, 'nomPista' => $nomPista, 'huecos_disponibles' => $disponiblesHoy, 'fecha' => $fechaActual]);
+            return view('formulario')->with(['tipoPista' => $tipoPista, 'nomPista' => $nomPista, 'huecos_disponibles' => $disponiblesHoy, 'fecha' => $fechaActual]);
         }else{
             return view('home');
         }
     }
-    public function guardar_reserva($codPista)
+    public function guardar_reserva()
     {
-        $reservas = $_POST[$codPista];
+        $reservas = $_POST['reservas'];
         /*$reservas = $request->input('reservas');*/
         
         foreach ($reservas as $codPista) {
