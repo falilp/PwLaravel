@@ -24,54 +24,53 @@
 http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
 -->
 <!-- style="background-image: url('https://media.tenor.com/hgBwZv6uX-MAAAAd/que-miras-bobo.gif');" MESSI-->
-<x-authentication-card>
-    <x-slot name="logo">
-    </x-slot>
-    @if (session('status'))
-        <div class="mb-4 font-medium text-sm text-green-600">
-            {{ session('status') }}
+    <section class="vh-100" style="background-image: url('https://media.tenor.com/hgBwZv6uX-MAAAAd/que-miras-bobo.gif'); background-size: 95%; align-items: center;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+                <div class="card" style="border-radius: 1rem;">
+                <div class="row g-0">
+                    <div class="col-md-6 col-lg-5 d-none d-md-block">
+                    <img src="https://media.tenor.com/hgBwZv6uX-MAAAAd/que-miras-bobo.gif"
+                        alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                    </div>
+                    <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                    <div class="card-body p-4 p-lg-5 text-black">
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
+                            <div class="d-flex align-items-center mb-3 pb-1">
+                                <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                                <span class="h1 fw-bold mb-0">Iniciar sesi&oacuten</span>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="nombre">Nombre/Email</label>
+                                <input type="email" id="nombre" name="nombre" class="form-control form-control-lg" />
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="password">Contraseña</label>
+                                <input type="password" id="password" name="password" class="form-control form-control-lg" />
+                            </div>
+
+                            <div class="pt-1 mb-4">
+                                <button class="btn btn-dark btn-lg btn-block">{{ __('Iniciar sesión') }}</button>
+                            </div>
+
+                            <!--<a class="small text-muted" href="#!">Forgot password?</a>-->
+                            <p class="mb-5 pb-lg-2" style="color: #393f81;">¿No estas registrado? <a href="{{ route('registro') }}"
+                                style="color: #393f81;">Registrate</a></p>
+                            <a href="#!" class="small text-muted">Terms of use.</a>
+                            <a href="#!" class="small text-muted">Privacy policy</a>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
         </div>
-    @endif
-    </br></br>
-    <form method="POST" action="{{ route('login') }}">
-        <h3>Inicia sesi&oacuten</h3>
-        @csrf
-
-        <div>
-            <label for="nombre" value="{{ __('nombre') }}">Nombre/Email</label>
-            <input id="nombre" class="block mt-1 w-full" type="text" name="nombre" :value="old('nombre')" required autofocus autocomplete="nombre" />
-        </div>
-
-        <div class="mt-4">
-            <label for="password" value="{{ __('password') }}">Contraseña</label>
-            <input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password"/>
-        </div>
-
-        <!--<div class="block mt-4">
-            <label for="remember_me" class="flex items-center">
-                <x-checkbox id="remember_me" name="remember" />
-                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>-->
-
-        <div class="flex items-center justify-end mt-4">
-            <!--@if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif-->
-
-            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('registro') }}">
-                {{ __('registro') }}
-            </a>
-
-            <button class="btn btn-primary px-5">
-                {{ __('Iniciar sesión') }}
-            </button>
-        </div>
-        
-    </form>
-</x-authentication-card>
+    </section>
 </body>
 
 <!--Footer -->
