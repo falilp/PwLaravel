@@ -34,10 +34,9 @@
         </div>
     </div>
 </div>
+
 <div class="boton-reserva">
-@if (Auth::check())
-        <a href="#" role="button" class="btn btn-dark">Reserva ahora</a>
-    @else
+@if (!Auth::check())
         <a href="{{ route('login') }}"><button type="button" class="btn btn-dark">Registrate</button></a>
         <p class="font-italic text-muted">Registrate para poder acceder a la reserva de pistas</p>
     @endif
@@ -75,10 +74,17 @@
             <p class="font-italic text-muted"></p>
         </div>
     </div>
+    @if (Auth::check())
+    <div class="video-container">
+        <a href="{{ route('alquiler', ['tipoPista' => '6', 'fecha' => now()->format('Y-m-d')]) }}" role="button" class="btn btn-dark">Reserva ahora</a>
+    </div>
+    @endif
 </div>
+
 <div class="container-img">
     <img src="https://s1.eestatic.com/2021/12/24/malaga/vivir/637196374_218596164_1706x960.jpg">
 </div>
+
 
 <div class="container py-5">
     <h2 class="h3 font-weight-bold">SpeedFactory Indoor Karting</h2>
@@ -97,6 +103,11 @@
             <p class="font-italic text-muted"></p>
         </div>
     </div>
+    @if (Auth::check())
+    <div class="video-container">
+        <a href="{{ route('alquiler', ['tipoPista' => '7', 'fecha' => now()->format('Y-m-d')]) }}" role="button" class="btn btn-dark">Reserva ahora</a>
+    </div>
+    @endif
 </div>
 <div class="container-img">
     <img src="https://pland-architects.com/wp-content/uploads/2019/11/City-Mall-Karting-Track.jpg">

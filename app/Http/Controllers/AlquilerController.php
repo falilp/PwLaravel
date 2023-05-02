@@ -69,8 +69,7 @@ class AlquilerController extends Controller
             
             if ($alquiler) {
                 // actualizar disponible a false
-                $alquiler->disponible = 0;
-                $alquiler->save();
+                $alquiler->update(["disponible" => 0]);
             }
         }
         

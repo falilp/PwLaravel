@@ -13,15 +13,19 @@
 @endsection
 
 <body>
+
     <!-- Espacio informativo -->
-    <div class="container my-5">
+        <div class="container py-5">
+        <h2 class="h3 font-weight-bold" style="margin-top=4rem;">Bienvenidos a la sección de Eventos de KMB</h2>
         <div class="row">
-            <div class="col-md-12">
-                <h2>Bienvenidos a la sección de Eventos de KMB</h2>
-                <p>Organiza tus propios eventos y diviértete en compañía con familiares y amigos.</p>
-                <p>En nuestro circuito ofrecemos dos tipos de eventos: torneos y cumpleaños.</p>
-                <p>Los torneos son una competición en la que los participantes compiten por conseguir el mejor tiempo. Se dividen en diferentes categorías en función de la edad y la experiencia de los participantes. ¡Atrévete a competir con tus amigos!</p>
-                <p>Los cumpleaños son la oportunidad perfecta para celebrar tu cumpleaños con tus amigos mientras disfrutas de una experiencia única en nuestro circuito. Ofrecemos paquetes especiales para cumpleaños que incluyen comida, bebida y una experiencia de conducción que nunca olvidarás.</p>
+            <div class="col-lg-10 mb-4">
+                <p class="font-italic text-muted">Organiza tus propios eventos y diviértete en compañía con familiares y amigos.</p>
+                <p class="font-italic text-muted">En nuestro circuito ofrecemos dos tipos de eventos: torneos y cumpleaños.</p>
+                <p class="font-italic text-muted">Los torneos son una competición en la que los participantes compiten por conseguir el mejor tiempo. Se dividen en diferentes categorías en función de la edad y la experiencia de los participantes. ¡Atrévete a competir con tus amigos!</p>
+                <p class="font-italic text-muted">Los cumpleaños son la oportunidad perfecta para celebrar tu cumpleaños con tus amigos mientras disfrutas de una experiencia única en nuestro circuito. Ofrecemos paquetes especiales para cumpleaños que incluyen comida, bebida y una experiencia de conducción que nunca olvidarás.</p>
+            </div>
+            <div class="col-lg-8">
+                <p class="font-italic text-muted"></p>
             </div>
         </div>
     </div>
@@ -40,7 +44,7 @@
         <div class="container my-5">
             <div class="row">
                 <div class="col-md-12">
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#registroEventoModal">Registrar evento</button>
+                    <button class="btn btn-dark" data-toggle="modal" data-target="#registroEventoModal">Registrar evento</button>
                 </div>
             </div>
         </div>

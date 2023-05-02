@@ -31,7 +31,7 @@
 
                     @if (Auth::check())
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('profile') }}">Perfil</a>
+                        <a class="nav-link" href="{{ route('profile') }}">Perfil</a>
                         </li>
                     @endif
 
@@ -45,21 +45,6 @@
                         </li>
                     @endif
 
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Reserva
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{{ route('pistas') }}">Pistas</a></li>
-                        <li><hr class="dropdown-divider">Futbol 11</li>
-                        <li><a class="dropdown-item" href="{{ route('eventos') }}">Eventos</a></li>
-                    </ul>
-                    </a>
-                    </li>
-                    @if (Auth::check())
-                        <li class="nav-item">
-                        <a class="nav-link" href="{{ route('profile') }}">Perfil</a>
-                        </li>
-                    @endif
                 </ul>
                 </div>
             </div>
