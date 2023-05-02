@@ -1,8 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Auth;
-use App\Models\usuarios;
 use App\Models\Alquiler;
 use App\Http\Requests\guardarArticulo;
 
@@ -60,12 +58,24 @@ class AlquilerController extends Controller
             return view('home');
         }
     }
-
-    public function guardar_reserva(guardarArticulo $request){
-        $reservas = $_POST['reservas'];
-        $pistas = Alquiler::all();
-        foreach($reservas as $reserva){
-            $pistas->where('codPista', $reserva['codPista'])->update(['disponible' => '0']);
+    public function guardar_reserva($codPista)
+    {
+        $reservas = $_POST[$codPista];
+        /*$reservas = $request->input('reservas');*/
+        
+        foreach ($reservas as $codPista) {
+            // buscar alquiler por codPista
+            $alquiler = Alquiler::where('codPista', $codPista);
+            
+            if ($alquiler) {
+                // actualizar disponible a false
+                $alquiler->disponible = 0;
+                $alquiler->save();
+            }
         }
+        
+        return redirect()->route('home');
     }
+    
 }
+

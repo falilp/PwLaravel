@@ -34,7 +34,7 @@ Route::get('/eventos', 'App\Http\Controllers\EventosController@index')->name('ev
 Route::get('/circuitos', 'App\Http\Controllers\CircuitosController@index')->name('circuitos');
 
 Route::get('/pistas/alquiler/nuevo/{codPista}/{fecha}', 'App\Http\Controllers\AlquilerController@index')->name('alquiler');
-Route::post('/pistas/alquiler/nuevo/guardarReserva', 'App\Http\Controllers\AlquilerController@guardar_reserva')->name('alquiler.guardar_reserva');
+Route::post('/pistas/alquiler/nuevo/guardarReserva/{codPista}', 'App\Http\Controllers\AlquilerController@guardar_reserva')->name('alquiler.guardar_reserva');
 
 Route::get('/registro', 'App\Http\Controllers\UserController@showRegister')->name('registro');
 Route::post('/registro', [UserController::class,'register'])->name('registro');

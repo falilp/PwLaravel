@@ -9,5 +9,15 @@ class Alquiler extends Model
 {
     use HasFactory;
     protected $table = 'pista';
-    protected $fillable = ['disponible'];
+    protected $primaryKey = 'codPista'; // definimos 'codPista' como la clave primaria
+    protected $fillable = [
+        'tipoPista',
+        'precioHora',
+        'disponible',
+        'mensaje',
+        'HoraDisponible',
+        'created_at',
+        'updated_at'
+    ];
 }
+

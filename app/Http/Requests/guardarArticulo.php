@@ -22,10 +22,10 @@ class guardarArticulo extends FormRequest
     public function rules(): array
     {
         return [
-            'codPista' => 'required|max:100',
-            'tipoPista' => 'required|max:100',
-            'precioHora' => 'required|max:100',
-            'disponible' => 'required|max:100',
+            'codPista' => 'required|max:10',
+            'tipoPista' => 'required|max:1',
+            'precioHora' => 'required|max:2',
+            'disponible' => 'required|max:1',
             'mensaje' => 'nullable|max:100',
             'HoraDisponible' => 'required|max:100',
             'created_at' => 'nullable|max:100',

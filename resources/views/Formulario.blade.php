@@ -16,15 +16,14 @@
 
     <div class="container py-5">
     <h2 class="h3 font-weight-bold">Formulario Reserva Pistas: {{ $nomPista }}</h2>
+    <p class="font-italic text-muted"><strong>Rellena el formulario para completar la reserva</strong></p>
+    <a href="{{ route('alquiler', ['codPista' => $codPista, 'fecha' => Carbon\Carbon::parse($fecha)->addDay()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Anvanzar: {{ Carbon\Carbon::parse($fecha)->addDay()->format('Y-m-d') }}</button></a>
+    <p class="font-italic text-muted">Reserva ahora:</p>
+
+    <div class="col-lg-8">
     <div class="row">
-        <div class="col-lg-10 mb-4">
-            <p class="font-italic text-muted"><strong>Rellena el formulario para completar la reserva</strong></p>
-            <div class="col-lg-8">
-            <a href="{{ route('alquiler', ['codPista' => $codPista, 'fecha' => Carbon\Carbon::parse($fecha)->addDay()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Anvanzar: {{ Carbon\Carbon::parse($fecha)->addDay()->format('Y-m-d') }}</button></a>
-
-            <p class="font-italic text-muted">Reserva ahora:</p>
-
-    <form action="{{ route('alquiler.guardar_reserva') }}" method="POST">
+    <div class="col-lg-10 mb-4">
+    <form action="{{ route('alquiler.guardar_reserva', ['codPista' => $codPista]) }}" method="">
     @csrf
     <div class="container">        
         <div class="row">
@@ -50,8 +49,8 @@
                                             <td>{{ date('H:i:s', strtotime($fila['HoraDisponible'])) }}</td>
                                             <td>{{ date('H:i:s', strtotime($fila['HoraDisponible'] . '+30 minutes')) }}</td>
                                             <td>
-                                            <label class="customcheckbox" name="reservas" value="$fila">
-                                                <input type="checkbox" class="listCheckbox">
+                                            <label class="customcheckbox">
+                                                <input type="checkbox" class="listCheckbox" name="$fila['codPista']" value="{{ $fila['codPista'] }}">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </td>
@@ -64,11 +63,12 @@
             </div>
         </div>
         <div class="boton-enviar">
-            <button type="submmit" class="btn btn-dark" name="enviar">Reservar</button>
+            <button type="submit" class="btn btn-dark">Reservar</button>
         </div>
-    </form>
-</div>
+    </div>
+</form>
 
+</div>
 </div>
 </body>
 
