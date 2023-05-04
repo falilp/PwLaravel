@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    
+<title>Perfil</title>
 <!--Menu de navegacion-->
 @extends('layouts.nav')
 @section('nav_content')
@@ -11,6 +11,7 @@
             use Illuminate\Support\Facades\Auth;
             use App\Models\User; 
             $usuario = Auth::user();
+            echo Auth::user()->nombre;
             $codUsuario = $usuario->getAuthIdentifier();
             $usuario = User::where('id', $codUsuario)->first();
         ?>
