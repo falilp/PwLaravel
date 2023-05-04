@@ -13,7 +13,8 @@
 @endsection
 
 <body>
-
+    <br />
+    <br />
     <!-- Espacio informativo -->
         <div class="container py-5">
         <h2 class="h3 font-weight-bold" style="margin-top=4rem;">Bienvenidos a la sección de Eventos de KMB</h2>
@@ -29,7 +30,6 @@
             </div>
         </div>
     </div>
-
     <!-- Advertencia para usuarios no registrados/logueados -->
     @guest
         <div class="container my-5">

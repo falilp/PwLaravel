@@ -11,7 +11,8 @@
 @endsection
 
 <body>
-    <img src="..\public\img\fondoBlanco.png">
+    <br />
+    <br />
     <div class="header_pistas">
 
     <div class="container py-5">
@@ -19,14 +20,18 @@
     <div class="row">
         <div class="col-lg-10 mb-4">
             <p class="font-italic text-muted"><strong>¡Alquila nuestras instalaciones deportivas y vive una experiencia única!</strong> En KMB, contamos con una amplia variedad de espacios deportivos de alta calidad para que puedas disfrutar de tus deportes favoritos con tus amigos, familiares o compañeros de equipo. Además, nuestros precios son muy competitivos y ofrecemos flexibilidad en horarios y opciones de alquiler. ¡No te pierdas la oportunidad de reservar tu espacio y vivir una experiencia deportiva inolvidable en KMB!</p>
-            <div class="col-lg-8">
             @if (Auth::check())
-                <p class="font-italic text-muted">Reserva ahora:</p>
+                <div class="col-lg-8">
+                    <p class="font-italic text-muted">Reserva ahora:</p>
+                </div>
             @else
+                <div class="container my-5">
+                    <div class="alert alert-danger">
+                        Debe haber iniciado sesión en la página para acceder al registro de eventos.
+                    </div>
+                </div>
                 <a href="{{ route('login') }}"><button type="button" class="btn btn-dark">Inicia Sesion</button></a>
-                <p class="font-italic text-muted"> Inicia sesión para poder acceder a esta funcionalidad</p>
             @endif
-        </div>
     </div>
 </div>
 
@@ -37,8 +42,10 @@
         <div class="card__content">
             <div class="h5 font-weight-bold">Pistas Fútbol 11</div>
             <p class="font-italic text-muted">Nuestras pistas de fútbol 11 cuentan con las medidas reglamentarias y están diseñadas para brindarte una experiencia de juego excepcional. El césped artificial de alta calidad permite un buen control del balón y una mejor amortiguación en los impactos, lo que te permitirá jugar cómodamente durante horas. Además, nuestras instalaciones incluyen vestuarios y zonas de descanso para que puedas prepararte y recuperarte después de los partidos.</p>
-            <a href="{{ route('alquiler', ['tipoPista' => '0', 'fecha' => now()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
-        </div>
+            @if (Auth::check())
+                <a href="{{ route('alquiler', ['tipoPista' => '0', 'fecha' => now()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
+            @endif
+            </div>
         </div>
     </li>
     <li class="cards__item">
