@@ -28,11 +28,6 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
     <br />
     <!--section class="vh-100" style="background-image: url('https://media.tenor.com/hgBwZv6uX-MAAAAd/que-miras-bobo.gif'); background-size: 95%; align-items: center;"-->
     <div class="form_login">
-    <div class="container py-5 h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col col-xl-10">
-                <div class="card" style="border-radius: 1rem;">
-                <div class="row g-0">
                     <div class="col-md-6 col-lg-7 d-flex align-items-center">
                     <div class="card-body p-4 p-lg-5 text-black">
                         <form method="POST" action="{{ route('login') }}">
@@ -66,8 +61,6 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
                     </div>
                 </div>
                 </div>
-            </div>
-            </div>
         </div>
     </div>
     </section>
