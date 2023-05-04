@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Pista;
 use App\Models\Alquiler;
 use App\Http\Requests\guardarArticulo;
+use Illuminate\Support\Facades\Auth;
 
 class AlquilerController extends Controller
 {
@@ -48,7 +50,7 @@ class AlquilerController extends Controller
                 }break;
             }
 
-            $huecos_pista = Alquiler::all()->where('tipoPista', $tipoPista);
+            $huecos_pista = Pista::all()->where('tipoPista', $tipoPista);
             $disponibles = $huecos_pista->where('disponible', '1');
             $disponiblesHoy = $disponibles->filter(function ($item) use ($fechaActual) {
                 return substr($item->HoraDisponible, 0, 10) == $fechaActual;
@@ -60,21 +62,32 @@ class AlquilerController extends Controller
     }
     public function guardar_reserva()
     {
+        $usuario = Auth::user();
+        $codUsuario = $usuario->getAuthIdentifier();
+
         $reservas = $_POST['reservas'];
         /*$reservas = $request->input('reservas');*/
         
         foreach ($reservas as $codPista) {
             // buscar alquiler por codPista
-            $alquiler = Alquiler::where('codPista', $codPista);
+            $alquiler = Pista::where('codPista', $codPista)->first();
             
             if ($alquiler) {
                 // actualizar disponible a false
                 $alquiler->update(["disponible" => 0]);
+                
+                //Almacenamos la instancia en la tabla de Alquiler
+                $nuevoAlquiler = new Alquiler();
+                $nuevoAlquiler->codPista = $codPista;
+                $nuevoAlquiler->codUsuario = $codUsuario;
+                $nuevoAlquiler->fecha_alquiler = $alquiler->HoraDisponible;
+                $nuevoAlquiler->precio = $alquiler->precioHora;
+                $nuevoAlquiler->descuento = 0;
+                $nuevoAlquiler->save();
             }
         }
         
         return redirect()->route('home');
     }
-    
 }
 

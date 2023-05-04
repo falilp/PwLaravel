@@ -82,15 +82,12 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
     <div class="video-container">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51268.463559981545!2d-6.218797338378909!3d36.57149459917553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dd011d731c25b%3A0x929c66b8e1876e00!2sEl%20Puerto%20de%20Sta%20Mar%C3%ADa%2C%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1682624525583!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    
-</div>
-
+    </div>
 </body>
 
 <!--Footer -->
-    @extends('layouts.footer')
-    @section('footer_content')
-    @endsection
-
+@extends('layouts.footer')
+@section('footer_content')
+@endsection
 <!-- Cargar Scripts Iniciales -->
 </html>

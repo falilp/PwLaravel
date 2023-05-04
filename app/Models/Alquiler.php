@@ -8,16 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Alquiler extends Model
 {
     use HasFactory;
-    protected $table = 'pista';
-    protected $primaryKey = 'codPista'; // definimos 'codPista' como la clave primaria
+    protected $table="alquiler";
     protected $fillable = [
-        'tipoPista',
-        'precioHora',
-        'disponible',
-        'mensaje',
-        'HoraDisponible',
+        'codPista',
+        'codUsuario',
+        'fecha_alquiler',
+        'precio',
+        'descuento',
         'created_at',
         'updated_at'
     ];
 }
-
