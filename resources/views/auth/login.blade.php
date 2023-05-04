@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" version="XHTML+RDFa 1.0" lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="responsejs  forzar-scroll">
 <!--Head-->
 <head> 
-    <link media="all" type="text/css" rel="stylesheet" href="{{ asset('/css/home.css') }}">
+    <link media="all" type="text/css" rel="stylesheet" href="{{ asset('/css/login.css') }}">
     <title>Login</title>
     <link rel="icon" href="\public\img\favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -15,7 +15,6 @@
 @section('nav_content')
 @endsection
 
-
 <body>
     <!--<img src="https://media.tenor.com/hgBwZv6uX-MAAAAd/que-miras-bobo.gif">-->
 <!-- TIPS: 
@@ -24,32 +23,32 @@
 http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
 -->
 <!-- style="background-image: url('https://media.tenor.com/hgBwZv6uX-MAAAAd/que-miras-bobo.gif');" MESSI-->
-    <section class="vh-100" style="background-image: url('https://media.tenor.com/hgBwZv6uX-MAAAAd/que-miras-bobo.gif'); background-size: 95%; align-items: center;">
-        <div class="container py-5 h-100">
+    <br />
+    <br />
+    <br />
+    <!--section class="vh-100" style="background-image: url('https://media.tenor.com/hgBwZv6uX-MAAAAd/que-miras-bobo.gif'); background-size: 95%; align-items: center;"-->
+    <div class="form_login">
+    <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col col-xl-10">
                 <div class="card" style="border-radius: 1rem;">
                 <div class="row g-0">
-                    <div class="col-md-6 col-lg-5 d-none d-md-block">
-                    <img src="https://media.tenor.com/hgBwZv6uX-MAAAAd/que-miras-bobo.gif"
-                        alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
-                    </div>
                     <div class="col-md-6 col-lg-7 d-flex align-items-center">
                     <div class="card-body p-4 p-lg-5 text-black">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="d-flex align-items-center mb-3 pb-1">
                                 <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-                                <span class="h1 fw-bold mb-0">Iniciar sesi&oacuten</span>
+                                <span class="h1 font-weight-bold">Iniciar sesi&oacuten</span>
                             </div>
 
                             <div class="form-outline mb-4">
-                                <label class="form-label" for="nombre">Nombre/Email</label>
+                                <label class="font-italic text-muted" for="nombre">Nombre/Email</label>
                                 <input type="text" id="nombre" name="nombre" class="form-control form-control-lg" />
                             </div>
 
                             <div class="form-outline mb-4">
-                                <label class="form-label" for="password">Contraseña</label>
+                                <label class="font-italic text-muted" for="password">Contraseña</label>
                                 <input type="password" id="password" name="password" class="form-control form-control-lg" />
                             </div>
 
@@ -58,8 +57,8 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
                             </div>
 
                             <!--<a class="small text-muted" href="#!">Forgot password?</a>-->
-                            <p class="mb-5 pb-lg-2" style="color: #393f81;">¿No estas registrado? <a href="{{ route('registro') }}"
-                                style="color: #393f81;">Registrate</a></p>
+                            <p class="font-italic text-muted" style="color: #393f81;"><a href="{{ route('registro') }}"
+                                style="color: #393f81;">¿No estas registrado? Registrate</a></p>
                             <a href="#!" class="small text-muted">Terms of use.</a>
                             <a href="#!" class="small text-muted">Privacy policy</a>
                         </form>
@@ -70,6 +69,7 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
             </div>
             </div>
         </div>
+    </div>
     </section>
 </body>
 
