@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -45,6 +46,10 @@ Route::post('/registro', [UserController::class,'register'])->name('registro');
 Route::get('/login', 'App\Http\Controllers\UserController@showLogin')->name('login');
 Route::post('/login', [UserController::class,'login'])->name('login');
 //Route::post('/login',function(){return request('nombre');});
+
+Route::get('/admin', [AdminController::class, 'Home'])->name('adminHome');
+Route::get('/GenerarPistas', [AdminController::class, 'GenerarPistas'])->name('GenerarPistas');
+Route::get('/EliminarPistas', [AdminController::class, 'EliminarPistas'])->name('EliminarPistas');
 
 Route::middleware([
     'auth:sanctum',

@@ -31,23 +31,23 @@
 
                     @if (Auth::check())
                         <li class="nav-item">
-                        <a class="nav-link" href="{{ route('profile') }}">Perfil</a>
+                            <a class="nav-link" href="{{ route('profile') }}">Perfil</a>
                         </li>
                     @endif
 
                     @if (Auth::check() && Auth::user()->Permisos == 1)
                         <li class="nav-item">
-                        <a class="nav-link" href="{{ route('profile') }}">Admin</a>
+                            <a class="nav-link" href="{{ route('adminHome') }}">Admin</a>
                         </li>
                     @endif
 
                     @if (Auth::check())
                         <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}">Cerrar Sesion</a>
+                            <a class="nav-link" href="{{ route('logout') }}">Cerrar Sesion</a>
                         </li>
                     @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Iniciar Sesión</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">Iniciar Sesión</a>
                         </li>
                     @endif
 
