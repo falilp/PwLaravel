@@ -35,6 +35,12 @@
                         </li>
                     @endif
 
+                    @if (Auth::check() && Auth::user()->Permisos == 1)
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('profile') }}">Admin</a>
+                        </li>
+                    @endif
+
                     @if (Auth::check())
                         <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}">Cerrar Sesion</a>
