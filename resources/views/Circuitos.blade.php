@@ -35,12 +35,17 @@
     </div>
 </div>
 
-<div class="boton-reserva">
 @if (!Auth::check())
-        <a href="{{ route('login') }}"><button type="button" class="btn btn-dark">Registrate</button></a>
-        <p class="font-italic text-muted">Registrate para poder acceder a la reserva de pistas</p>
+        <div class="boton-reserva">
+            <a href="{{ route('login') }}"><button type="button" class="btn btn-dark">Inicia Sesion</button></a>
+        </div>
+        <div class="container my-5">
+                    <div class="alert alert-danger">
+                        Debe haber iniciado sesión en la página para acceder al registro de eventos.
+                    </div>
+                </div>
     @endif
-</div>
+
 
 <div class="container py-5">
     <h2 class="h3 font-weight-bold">Nuestros Karts</h2>
