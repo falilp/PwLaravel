@@ -31,6 +31,8 @@ Route::get('/profile', 'App\Http\Controllers\ProfileController@index')->name('pr
 Route::get('/pistas', 'App\Http\Controllers\PistasController@index')->name('pistas');
 
 Route::get('/eventos', 'App\Http\Controllers\EventosController@index')->name('eventos');
+Route::get('/eventos/torneo', 'App\Http\Controllers\EventosController@index')->name('crear_torneo');
+Route::get('/eventos/cumple', 'App\Http\Controllers\EventosController@index')->name('crear_cumple');
 
 Route::get('/circuitos', 'App\Http\Controllers\CircuitosController@index')->name('circuitos');
 

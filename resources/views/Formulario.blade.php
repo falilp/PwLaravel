@@ -45,7 +45,7 @@
                             <tbody class="customtable">
                                 @foreach ($huecos_disponibles as $fila)
                                     <tr>
-                                            <td>{{  date('Y-m-d', strtotime($fila['HoraDisponible'])) }}</td>
+                                            <td>{{ date('Y-m-d', strtotime($fila['HoraDisponible'])) }}</td>
                                             <td>{{ date('H:i:s', strtotime($fila['HoraDisponible'])) }}</td>
                                             <td>{{ date('H:i:s', strtotime($fila['HoraDisponible'] . '+30 minutes')) }}</td>
                                             <td>

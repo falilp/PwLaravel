@@ -21,12 +21,7 @@
         <div class="row">
             <div class="col-lg-10 mb-4">
                 <p class="font-italic text-muted">Organiza tus propios eventos y diviértete en compañía con familiares y amigos.</p>
-                <p class="font-italic text-muted">En nuestro circuito ofrecemos dos tipos de eventos: torneos y cumpleaños.</p>
-                <p class="font-italic text-muted">Los torneos son una competición en la que los participantes compiten por conseguir el mejor tiempo. Se dividen en diferentes categorías en función de la edad y la experiencia de los participantes. ¡Atrévete a competir con tus amigos!</p>
-                <p class="font-italic text-muted">Los cumpleaños son la oportunidad perfecta para celebrar tu cumpleaños con tus amigos mientras disfrutas de una experiencia única en nuestro circuito. Ofrecemos paquetes especiales para cumpleaños que incluyen comida, bebida y una experiencia de conducción que nunca olvidarás.</p>
-            </div>
-            <div class="col-lg-8">
-                <p class="font-italic text-muted"></p>
+                <p class="font-italic text-muted">En nuestras instalaciones se pueden organizar dos clases de eventos: torneos y cumpleaños.</p>
             </div>
         </div>
     </div>
@@ -41,14 +36,36 @@
 
     <!-- Botones para registrar eventos -->
     @auth
+        <div class="text-center my-5">
+            <a href="{{ route('eventos') }}" class="btn btn-primary">Ver mis Eventos</a>
+        </div>
         <div class="container my-5">
             <div class="row">
-                <div class="col-md-12">
-                    <button class="btn btn-dark" data-toggle="modal" data-target="#registroEventoModal">Registrar evento</button>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://fondosmil.com/fondo/5803.jpg" class="card-img-top" alt="Imagen de torneo">
+                        <div class="card-body">
+                            <div class="h5 font-weight-bold">Torneos</div>
+                            <p class="font-italic text-muted">Los torneos son una competición en la que los participantes compiten por conseguir el mejor tiempo. Se dividen en diferentes categorías en función de la edad y la experiencia de los participantes. ¡Atrévete a competir con tus amigos!</p>
+                            <a href="{{ route('crear_torneo') }}" class="btn btn-dark">Registrar torneo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="public/img/niñosCumpleaños.jpg" class="card-img-top" alt="Imagen de cumpleaños">
+                        <div class="card-body">
+                            <div class="h5 font-weight-bold">Cumpleaños</div>
+                            <p class="font-italic text-muted">Los cumpleaños son la oportunidad perfecta para celebrar tu cumpleaños con tus amigos mientras disfrutas de una experiencia única en nuestro circuito. Ofrecemos paquetes especiales para cumpleaños que incluyen comida, bebida y una experiencia de conducción que nunca olvidarás.</p>
+                            <a href="{{ route('crear_cumple') }}" class="btn btn-dark">Registrar cumpleaños</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     @endauth
+
+
 
 <!--footer-->
 @extends('layouts.footer')
