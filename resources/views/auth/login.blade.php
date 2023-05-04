@@ -45,7 +45,7 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
 
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="nombre">Nombre/Email</label>
-                                <input type="email" id="nombre" name="nombre" class="form-control form-control-lg" />
+                                <input type="text" id="nombre" name="nombre" class="form-control form-control-lg" />
                             </div>
 
                             <div class="form-outline mb-4">

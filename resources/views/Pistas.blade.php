@@ -47,7 +47,7 @@
         <div class="card__content">
             <div class="h5 font-weight-bold">Pistas Fútbol 7</div>
             <p class="font-italic text-muted">En KMB, también contamos con pistas de fútbol 7 para que puedas disfrutar de este deporte con tus amigos o compañeros de equipo. Al igual que nuestras pistas de fútbol 11, nuestras pistas de fútbol 7 cuentan con césped artificial de alta calidad y medidas reglamentarias. Las pistas están diseñadas para que puedas disfrutar de partidos emocionantes y divertidos en un ambiente seguro y controlado.</p>
-            @if (Auth::check())            
+            @if (Auth::check())        
                 <a href="{{ route('alquiler', ['tipoPista' => '1', 'fecha' => now()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Reserva</button></a>
             @endif
         </div>
