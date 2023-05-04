@@ -54,13 +54,13 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
                             </div>
 
                             <div class="form-outline mb-4">
-                                <label class="form-label" for="telefono">Teléfono</label>
-                                <input type="number" id="telefono" name="telefono" class="form-control form-control-lg" />
+                                <label class="form-label" for="email">Email</label>
+                                <input type="email" id="email" name="email" class="form-control form-control-lg" />
                             </div>
 
                             <div class="form-outline mb-4">
-                                <label class="form-label" for="email">Email</label>
-                                <input type="email" id="email" name="email" class="form-control form-control-lg" />
+                                <label class="form-label" for="telefono">Teléfono</label>
+                                <input type="number" id="telefono" name="telefono" class="form-control form-control-lg" />
                             </div>
 
                             <div class="mt-4">
