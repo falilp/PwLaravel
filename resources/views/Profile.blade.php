@@ -55,7 +55,7 @@
                         </div>
 
                         <div class="pt-1 mb-4">
-                            <button class="btn btn-dark btn-lg btn-block">{{ __('Actualizar') }}</button> <!---DUDAS-->
+                            <button class="btn btn-dark btn-lg btn-block">{{ __('Actualizar') }}</button>
                         </div>
                     </form>
                 </div>
@@ -64,12 +64,16 @@
                     <br>
                     <br>
                     <br>
-                        <div class="pt-1 mb-4">
-                            <button class="btn btn-dark btn-block">{{ __('Actualizar') }}</button> <!---DUDAS-->
-                        </div>
-                        <div class="pt-1 mb-4">
-                            <button class="btn btn-dark btn-block">{{ __('Actualizar') }}</button> <!---DUDAS-->
-                        </div>
+                    <div class="pt-1 mb-4">
+                        <a href="{{ route('ReservaUsuario') }}" style = "Text-decoration: none;">
+                            <button class="btn btn-outline-dark btn-block">{{ __('Consultar Mis Reservas') }}</button>
+                        </a>
+                    </div>
+                    <div class="pt-1 mb-4">
+                        <a href="" style = "Text-decoration: none;">
+                            <button class="btn btn-outline-dark btn-block">{{ __(' Consultar Mis Eventos') }}</button> 
+                        </a>
+                    </div>
                 </div>
         </div>
     </body>
