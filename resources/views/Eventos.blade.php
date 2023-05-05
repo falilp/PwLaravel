@@ -36,9 +36,6 @@
 
     <!-- Botones para registrar eventos -->
     @auth
-        <div class="text-center my-5">
-            <a href="{{ route('eventos') }}" class="btn btn-primary">Ver mis Eventos</a>
-        </div>
         <div class="container my-5">
             <div class="row">
                 <div class="col-md-4">
@@ -53,7 +50,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="public/img/niñosCumpleaños.jpg" class="card-img-top" alt="Imagen de cumpleaños">
+                        <img src="https://www.etapainfantil.com/wp-content/uploads/2019/04/celebrar-cumpleanos-ninos.jpg" class="card-img-top" alt="Imagen de cumpleaños">
                         <div class="card-body">
                             <div class="h5 font-weight-bold">Cumpleaños</div>
                             <p class="font-italic text-muted">Los cumpleaños son la oportunidad perfecta para celebrar tu cumpleaños con tus amigos mientras disfrutas de una experiencia única en nuestro circuito. Ofrecemos paquetes especiales para cumpleaños que incluyen comida, bebida y una experiencia de conducción que nunca olvidarás.</p>
