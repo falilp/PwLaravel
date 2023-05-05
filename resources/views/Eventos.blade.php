@@ -59,13 +59,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
     @endauth
 
 
 
 <!--footer-->
-@extends('layouts.footer')
+    @extends('layouts.footer')
     @section('footer_content')
     @endsection
 </html>

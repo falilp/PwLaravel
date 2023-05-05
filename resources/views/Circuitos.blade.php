@@ -81,7 +81,7 @@
     </div>
     @if (Auth::check())
     <div class="video-container">
-        <a href="{{ route('alquiler', ['tipoPista' => '6', 'fecha' => now()->format('Y-m-d')]) }}" role="button" class="btn btn-dark">Reserva ahora</a>
+        <a href="{{ route('alquiler', ['tipoPista' => '7', 'fecha' => now()->format('Y-m-d')]) }}" role="button" class="btn btn-dark">Reserva ahora</a>
     </div>
     @endif
 </div>
@@ -110,7 +110,7 @@
     </div>
     @if (Auth::check())
     <div class="video-container">
-        <a href="{{ route('alquiler', ['tipoPista' => '7', 'fecha' => now()->format('Y-m-d')]) }}" role="button" class="btn btn-dark">Reserva ahora</a>
+        <a href="{{ route('alquiler', ['tipoPista' => '8', 'fecha' => now()->format('Y-m-d')]) }}" role="button" class="btn btn-dark">Reserva ahora</a>
     </div>
     @endif
 </div>

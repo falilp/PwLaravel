@@ -16,7 +16,7 @@ class AdminController extends Controller{
             //$pista = new Pista();
             $date = new DateTime();
             $date->modify('+1 day');
-            $dicc = array(1=>"Pista de fútbol 11",2=>"Pista de fútbol 7",3=>"Pista de fútbol sala",4=>"Pista de tenis",5=>"Pista de baloncesto",6=>"Pista de voleibol",7=>"Pista de pádel",8=>"Circuito Kart");
+            $dicc = array(1=>"Pista de fútbol 11",2=>"Pista de fútbol 7",3=>"Pista de fútbol sala",4=>"Pista de baloncesto",5=>"Pista de Tenis", 6=>"Pista de Padel",7=>"WindyCurveKarting",8=>"SpeedFactory Indoor Karting");
             $horas = array(1=>"10" , 2=>"11" ,3=>"12" , 4=>"13" , 5=>"15" , 6=>"16" , 7=>"17" , 8=>"18" , 9=>"19" , 10=>"20" , 11=>"21");
             $precio = array(1=>"22",2=>"17",3=>"15",4=>"12",5=>"20",6=>"20",7=>"12",8=>"25");
 

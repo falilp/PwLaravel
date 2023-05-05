@@ -22,36 +22,36 @@ class AlquilerController extends Controller
     public function index($tipoPista, $fechaActual){
         $nomPista = 'null';
 
-        if($tipoPista >= 0 && $tipoPista <= 7){
+        if($tipoPista >= 1 && $tipoPista <= 8){
             switch($tipoPista){
-                case 0:{
+                case 1:{
                     $nomPista = "Futbol 11";
                 }break;
-                case 1:{
+                case 2:{
                     $nomPista = "Futbol 7";
                 }break;
-                case 2:{
+                case 3:{
                     $nomPista = "Futbol Sala";
                 }break;
-                case 3:{
+                case 4:{
                     $nomPista = "Baloncesto";
                 }break;
-                case 4:{
+                case 5:{
                     $nomPista = "Tenis";
                 }break;
-                case 5:{
+                case 6:{
                     $nomPista = "Pádel";
                 }break;
-                case 6:{
+                case 7:{
                     $nomPista = "WindyCurveKarting";
                 }break;
-                case 7:{
+                case 8:{
                     $nomPista = "SpeedFactory Indoor Karting";
                 }break;
             }
 
             $huecos_pista = Pista::all()->where('tipoPista', $tipoPista);
-            $disponibles = $huecos_pista->where('disponible', '1');
+            $disponibles = $huecos_pista->where('disponible', '0');
             $disponiblesHoy = $disponibles->filter(function ($item) use ($fechaActual) {
                 return substr($item->HoraDisponible, 0, 10) == $fechaActual;
             });
@@ -68,13 +68,13 @@ class AlquilerController extends Controller
         $reservas = $_POST['reservas'];
         /*$reservas = $request->input('reservas');*/
         
-        foreach ($reservas as $codPista) {
+        foreach($reservas as $codPista => $value) {
             // buscar alquiler por codPista
             $alquiler = Pista::where('codPista', $codPista)->first();
             
             if ($alquiler) {
                 // actualizar disponible a false
-                $alquiler->update(["disponible" => 0]);
+                $alquiler->update(["disponible" => 1]);
                 
                 //Almacenamos la instancia en la tabla de Alquiler
                 $nuevoAlquiler = new Alquiler();

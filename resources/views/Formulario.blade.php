@@ -47,10 +47,10 @@
                                     <tr>
                                             <td>{{ date('Y-m-d', strtotime($fila['HoraDisponible'])) }}</td>
                                             <td>{{ date('H:i:s', strtotime($fila['HoraDisponible'])) }}</td>
-                                            <td>{{ date('H:i:s', strtotime($fila['HoraDisponible'] . '+30 minutes')) }}</td>
+                                            <td>{{ date('H:i:s', strtotime($fila['HoraDisponible'] . '+60 minutes')) }}</td>
                                             <td>
                                             <label class="customcheckbox">
-                                                <input type="checkbox" class="listCheckbox" name="reservas[$fila['codPista']]" value="{{ $fila['codPista'] }}">
+                                                <input type="checkbox" class="listCheckbox" name="reservas[{{$fila['codPista']}}]]" value="{{ $fila['codPista'] }}">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </td>
@@ -73,8 +73,7 @@
 </body>
 
 <!--Footer -->
-    @extends('layouts.footer')
-    @section('footer_content')
-    @endsection
-    
+@extends('layouts.footer')
+@section('footer_content')
+@endsection
 </html>
