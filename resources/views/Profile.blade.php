@@ -16,12 +16,12 @@
             $usuario = User::where('id', $codUsuario)->first();
         ?>
         <div style="Display: flex;">
-                <div class="card-body p-4 p-lg-5 text-black">
+                <div class="card-body p-4 p-lg-5 text-black" >
                     <br>
-                    <form method="POST" action="">
+                    <form method="POST" action="" ">
                         <div class="d-flex align-items-center mb-3 pb-1">
                             <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-                            <span class="h1 font-weight-bold">General</span>
+                            <span class="h1 font-weight-bold">Datos del Usuario</span>
                         </div>
 
                         <div class="form-outline mb-4">
