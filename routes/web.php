@@ -55,6 +55,11 @@ Route::post('/Profile/ReservaUsuario/EliminarReserva/{codPista}', 'App\Http\Cont
 Route::get('/admin', [AdminController::class, 'Home'])->name('adminHome');
 Route::get('/GenerarPistas', [AdminController::class, 'GenerarPistas'])->name('GenerarPistas');
 Route::get('/EliminarPistas', [AdminController::class, 'EliminarPistas'])->name('EliminarPistas');
+Route::get('/ListaUsuarios', [AdminController::class, 'ListaUsuarios'])->name('ListaUsuarios');
+Route::get('/ListaEventos', [AdminController::class, 'ListaEventos'])->name('ListaEventos');
+Route::get('/ListaAlquiler', [AdminController::class, 'ListaAlquiler'])->name('ListaAlquiler');
+
+
 
 Route::middleware([
     'auth:sanctum',

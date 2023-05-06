@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Alquiler;
+use App\Models\Eventos;
 use App\Models\Pista;
+use App\Models\User;
 use Auth;
 use Illuminate\Http\Request;
 use Nette\Utils\DateTime;
@@ -51,6 +54,50 @@ class AdminController extends Controller{
         }*/
     }
     public function EliminarPistas(){
-        
+        if(Auth::user()->Permisos == 1){
+            $date = new DateTime();
+            $date = $date->format('Y-m-d H:i:s');
+
+            $pistas = Pista::all()->where('HoraDisponible', '<', $date);
+            Pista::destroy($pistas);
+
+            return redirect('/admin');
+        }
+    }
+
+    public function ListaUsuarios(){
+        if(Auth::user()->Permisos == 1){
+            return view("UsuariosLista");
+        }
+    }
+
+    static function devolverListaUsuarios(){
+        if(Auth::user()->Permisos == 1){
+            return User::all();;
+        }
+    }
+
+    public function ListaAlquiler(){
+        if(Auth::user()->Permisos == 1){
+            return view("AlquilerLista");
+        }
+    }
+
+    static function devolverListaAlquiler(){
+        if(Auth::user()->Permisos == 1){
+            return Alquiler::all();;
+        }
+    }
+
+    public function ListaEventos(){
+        if(Auth::user()->Permisos == 1){
+            return view("EventosLista");
+        }
+    }
+
+    static function devolverListaEventos(){
+        if(Auth::user()->Permisos == 1){
+            return Eventos::all();;
+        }
     }
 }
