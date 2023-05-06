@@ -19,41 +19,29 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php 
-                        use Illuminate\Support\Facades\Auth;
-                        use App\Models\Alquiler;
-                        use App\Models\User; 
-                        $usuario = Auth::user();
-                        $codUsuario = $usuario->getAuthIdentifier();
-                        $pistas = Alquiler::where('codUsuario', $codUsuario)->get();
-                        $pistas = Alquiler::orderby('fecha_alquiler', 'desc')->get();
-                        $contador = 0;
-                        foreach($pistas as $pista): $contador++;?>
+                        @foreach ($pistas as $pista) 
                             <tr>
-                                <th scope="row"><?php echo $contador ?></th>
-                                <td><?php echo $pista->codPista; ?></td>
-                                <td><?php echo $pista->fecha_alquiler;?></td>
+                                <td>{{$contador++}}</td>
+                                <td>{{ $pista->codPista }}</td>
+                                <td>{{ $pista->fecha_alquiler}}</td>
                                 
-                                <?php 
-                                    if($pista->fecha_alquiler > date('Y-m-d') )
-                                    {
-                                        ?>
-                                        <td><?php echo $pista->precio; ?></td>
-                                        <td> 
-                                            <form action="{{ route('ReservaUsuario.eliminar_reserva') }}" method="POST">
-                                            @csrf
-                                                <input type="text" id="id" name="id" value=" <?php echo $pista->codPista; ?>" hidden>
-                                                <button class="btn btn-outline-dark btn-block">Eliminar</button>
+                                    @if($pista->fecha_alquiler > date('Y-m-d') )
+                                    
+                                        
+                                        <td>{{ $pista->precio }}</td>
+                                        <td>
+                                            <form action="{{ route('ReservaUsuario.eliminar_reserva',['codPista' => $pista->codPista]) }}" method="post">
+                                                @csrf
+                                                <input type="text" value="" hidden>
+                                                <button type="submit" class="btn btn-danger">Eliminar</button>
                                             </form>
-                                        </td><?php
-                                    }
-                                    else{
-                                        ?> <td colspan="2"><?php echo $pista->precio; ?></td> <?php
-                                    }
-                                ?>
+                                    @else
+                                        <td colspan="2">{{ $pista->precio }}</td> 
+                                    
+                                    @endif
                                 
                             </tr>
-                        <?php endforeach; ?>
+                        @endforeach
                 </tbody>
             </table>
         </div>

@@ -11,7 +11,7 @@ class ReservaUsuarioRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true;
+        return false;
     }
 
     /**
@@ -22,7 +22,6 @@ class ReservaUsuarioRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'codPista' => 'required'
         ];
     }
 }

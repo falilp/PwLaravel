@@ -9,8 +9,8 @@ class Alquiler extends Model
 {
     use HasFactory;
     protected $table="alquiler";
+    protected $primaryKey = 'codPista';
     protected $fillable = [
-        'codPista',
         'codUsuario',
         'fecha_alquiler',
         'precio',
