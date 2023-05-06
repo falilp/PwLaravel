@@ -24,7 +24,7 @@
                 <div class="card-body text-center">
                     <h4 class="card-title">Usuarios</h4>
                     <p class="card-text">Lista con todos los usuario.</p>
-                    <a href="#" class="btn btn-primary">IR</a>
+                    <a href="{{ route('ListaUsuarios') }}"  class="btn btn-primary">IR</a>
                 </div>
             </div>
             <div class="card bg" style="width:400px">
@@ -32,7 +32,7 @@
                 <div class="card-body text-center">
                     <h4 class="card-title">Alquileres</h4>
                     <p class="card-text">Lista con todos los alquileres.</p>
-                    <a href="#" class="btn btn-primary">IR</a>
+                    <a href="{{ route('ListaAlquiler') }}"class="btn btn-primary">IR</a>
                 </div>
             </div>
             <div class="card bg" style="width:400px">
@@ -40,7 +40,7 @@
                 <div class="card-body text-center">
                     <h4 class="card-title">Eventos</h4>
                     <p class="card-text">Lista con todos los eventos.</p>
-                    <a href="#" class="btn btn-primary">IR</a>
+                    <a href="{{ route('ListaEventos') }}" class="btn btn-primary">IR</a>
                 </div>
             </div>
             <div class="card bg" style="width:400px">
@@ -57,6 +57,14 @@
                     <h4 class="card-title">Eliminar Pistas</h4>
                     <p class="card-text">Eliminara las pistas al dia anterior al que se ejecuta.</p>
                     <a href="{{ route('EliminarPistas') }}" class="btn btn-primary">IR</a>
+                </div>
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/GZgrtsucMK0AAAAi/discord-discordgifemoji.gif" alt="Card image">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Listas Pistas</h4>
+                    <p class="card-text">Lista de todos las pistas.</p>
+                    <a href="" class="btn btn-primary">IR</a>
                 </div>
             </div>
         </div>
