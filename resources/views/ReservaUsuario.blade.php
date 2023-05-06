@@ -32,14 +32,20 @@
                             <tr>
                                 <th scope="row"><?php echo $contador ?></th>
                                 <td><?php echo $pista->codPista; ?></td>
-                                <td><?php echo $pista->fecha_alquiler; ?></td>
+                                <td><?php echo $pista->fecha_alquiler;?></td>
                                 
                                 <?php 
                                     if($pista->fecha_alquiler > date('Y-m-d') )
                                     {
                                         ?>
                                         <td><?php echo $pista->precio; ?></td>
-                                        <td> <form action="{{ route('ReservaUsuario.eliminar_reserva', ['id' => $pista->id]) }}" method="POST"><button type="submit" class="btn btn-outline-dark btn-block">Eliminar</button></form></td><?php
+                                        <td> 
+                                            <form action="{{ route('ReservaUsuario.eliminar_reserva') }}" method="POST">
+                                            @csrf
+                                                <input type="text" id="id" name="id" value=" <?php echo $pista->codPista; ?>" hidden>
+                                                <button class="btn btn-outline-dark btn-block">Eliminar</button>
+                                            </form>
+                                        </td><?php
                                     }
                                     else{
                                         ?> <td colspan="2"><?php echo $pista->precio; ?></td> <?php
