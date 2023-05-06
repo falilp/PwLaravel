@@ -48,6 +48,9 @@ Route::post('/login', [UserController::class,'login'])->name('login');
 //Route::post('/login',function(){return request('nombre');});
 
 Route::get('/Profile/ReservaUsuario', 'App\Http\Controllers\ReservaUsuarioController@index')->name('ReservaUsuario');
+Route::get('/Profile/EventosUsuario', 'App\Http\Controllers\EventosUsuarioController@index')->name('EventosUsuario');
+
+Route::post('/Profile/ReservaUsuario/EliminarReserva', 'App\Http\Controllers\ReservaUsuarioController@eliminar_reserva')->name('ReservaUsuario.eliminar_reserva');
 
 Route::get('/admin', [AdminController::class, 'Home'])->name('adminHome');
 Route::get('/GenerarPistas', [AdminController::class, 'GenerarPistas'])->name('GenerarPistas');
