@@ -65,9 +65,37 @@ class AdminController extends Controller{
         }
     }
 
-    static function ModificarPista(){
+    public function ListaPistas(){
         if(Auth::user()->Permisos == 1){
-            
+            return view("PistaLista");
+        }
+    }
+
+    static function devolverListaPistas(){
+        if(Auth::user()->Permisos == 1){
+            return Pista::all();
+        }
+    }
+
+    public function ModificarPista(Pista $pista){
+        if(Auth::user()->Permisos == 1){
+            if(Auth::user()->Permisos == 1){
+                return view("ModificarPista", ['pista' => $pista]);
+            }
+        }
+    }
+
+    public function actualizarPista(Request $request,$pista){
+        if(Auth::user()->Permisos == 1){
+            $pista = Pista::find($pista);
+            $pista->nombre = $request->input('NombreUsuario');
+            $pista->apellidos = $request->input('ApellidosUsuario');
+            $pista->email = $request->input('EmailUsuario');
+            $pista->telefono = $request->input('TelefonoUsuario');
+            $pista->Permisos = $request->input('PermisosUsuario');
+            $pista->save();
+
+            return redirect('/ListaPistas');
         }
     }
 
@@ -89,7 +117,7 @@ class AdminController extends Controller{
         }
     }
 
-    public function actualizar(Request $request,$id){
+    public function actualizarUser(Request $request,$id){
         if(Auth::user()->Permisos == 1){
             $usuario = User::find($id);
             $usuario->nombre = $request->input('NombreUsuario');
@@ -115,9 +143,23 @@ class AdminController extends Controller{
         }
     }
 
-    public function ModificarAlquiler(){
+    public function ModificarAlquiler(Alquiler $alquiler){
         if(Auth::user()->Permisos == 1){
-            
+            return view("ModificarUsuario", ['alquiler' => $alquiler]);
+        }
+    }
+
+    public function actualizarAlquiler(Request $request,$id){
+        if(Auth::user()->Permisos == 1){
+            $alquiler = Alquiler::find($id);
+            $alquiler->nombre = $request->input('NombreUsuario');
+            $alquiler->apellidos = $request->input('ApellidosUsuario');
+            $alquiler->email = $request->input('EmailUsuario');
+            $alquiler->telefono = $request->input('TelefonoUsuario');
+            $alquiler->Permisos = $request->input('PermisosUsuario');
+            $alquiler->save();
+
+            return redirect('/ListaAlquiler');
         }
     }
 
@@ -133,9 +175,23 @@ class AdminController extends Controller{
         }
     }
 
-    public function ModificarEvento(){
+    public function ModificarEveno(Eventos $evento){
         if(Auth::user()->Permisos == 1){
-            
+            return view("ModificarUsuario", ['evento' => $evento]);
+        }
+    }
+
+    public function actualizarEvento(Request $request,$id){
+        if(Auth::user()->Permisos == 1){
+            $evento = Alquiler::find($id);
+            $evento->nombre = $request->input('NombreUsuario');
+            $evento->apellidos = $request->input('ApellidosUsuario');
+            $evento->email = $request->input('EmailUsuario');
+            $evento->telefono = $request->input('TelefonoUsuario');
+            $evento->Permisos = $request->input('PermisosUsuario');
+            $evento->save();
+
+            return redirect('/ListaEventos');
         }
     }
 }

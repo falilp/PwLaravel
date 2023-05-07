@@ -63,7 +63,7 @@ Route::put('/ModificarPista/{pista}', [AdminController::class, 'actualizar'])->n
 
 Route::get('/ListaUsuarios', [AdminController::class, 'ListaUsuarios'])->name('ListaUsuarios');
 Route::get('/ModificarUsuario/{usuario}', [AdminController::class, 'ModificarUsuario'])->name('ModificarUsuario');
-Route::put('/actualizar/{id}', [AdminController::class, 'actualizar'])->name('actualizar');
+Route::put('/actualizar/{id}', [AdminController::class, 'actualizarUser'])->name('actualizar');
 
 Route::get('/ListaEventos', [AdminController::class, 'ListaEventos'])->name('ListaEventos');
 Route::get('/ModificarEvento/{evento}', [AdminController::class, 'ModificarEvento'])->name('ModificarEvento');

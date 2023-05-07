@@ -24,18 +24,18 @@
                 <tbody>
                     @php
                         use App\Http\Controllers\AdminController;
-                        $usuarios = AdminController::devolverListaUsuarios();
+                        $alquiler = AdminController::devolverListaAlquiler();
                         $contador = 0;
                     @endphp
-                    @foreach($usuarios as $usuario)
+                    @foreach($alquiler as $alq)
                         @php $contador++ @endphp
                         <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>                                
-                            <td></td>
+                            <th scope="row">{{$contador}}</th>
+                            <td>{{$alq->codPista}}</td>
+                            <td>{{$alq->codUsuario}}</td>
+                            <td>{{$alq->fecha_alquiler}}</td>
+                            <td>{{$alq->precio}}</td>                                
+                            <td>{{$alq->descuento}}</td>
                             <td><button class="btn btn-danger">Eliminar</button></td>
                             <td><button class="btn btn-primary">Modificar</button></td>
                         </tr>
