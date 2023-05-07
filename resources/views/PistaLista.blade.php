@@ -36,8 +36,8 @@
                             <td>{{$usuario->email}}</td>
                             <td>{{$usuario->telefono}}</td>                                
                             <td>{{$usuario->Permisos}}</td>
-                            <td><button class="btn btn-danger btn-lg btn-block">Eliminar</button></td>
-                            <td><button class="btn btn-primary btn-lg btn-block">Modificar</button></td>
+                            <td><button class="btn btn-danger">Eliminar</button></td>
+                            <td><a href="{{ route('ModificarPista', $usuario) }}" class="btn btn-primary">Modificar</a></td>
                         </tr>
                     @endforeach
                 </tbody>
