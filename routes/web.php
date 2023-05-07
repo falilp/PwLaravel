@@ -50,6 +50,8 @@ Route::post('/login', [UserController::class,'login'])->name('login');
 
 Route::get('/Profile/ReservaUsuario', 'App\Http\Controllers\ReservaUsuarioController@index')->name('ReservaUsuario');
 Route::get('/Profile/EventosUsuario', 'App\Http\Controllers\EventosUsuarioController@index')->name('EventosUsuario');
+Route::put('/Profile/actualizar', 'App\Http\Controllers\ProfileController@actualizarUsuario')->name('ActualizarUsuario');
+
 
 Route::post('/Profile/ReservaUsuario/EliminarReserva/{codPista}', 'App\Http\Controllers\ReservaUsuarioController@eliminar_reserva')->name('ReservaUsuario.eliminar_reserva');
 Route::post('/eventos', 'App\Http\Controllers\EventosController@guardar_evento')->name('eventos.guardar');
