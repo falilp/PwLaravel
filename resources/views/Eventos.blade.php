@@ -88,7 +88,7 @@
                                 </ul>
                                 <form action="{{ route('Eventos.registro_indv', ['codEvento' => 2, 'tipoPista' => 3, 'descripcion' => 'Gran Premio Conil', 'fechaEvento' => '2023-05-13 10:00:00']) }}" method="post">
                                                 @csrf
-                                                <button type="submit" class="btn btn-dark">Darse de Alta Individual</button>
+                                    <button type="submit" class="btn btn-dark">Darse de Alta Individual</button>
                                 </form>
 			</div>
 		</article>
@@ -135,15 +135,15 @@
                 <div class="form-group">
                     <label for="pista">Tipo de pista:</label>
                     <select class="form-control" id="pista" name="pista" required>
-                        <option value="">Seleccione una opción</option>
-                        <option value="1">Fútbol 11</option>
-                        <option value="2">Fútbol 7</option>
-                        <option value="3">Fútbol Sala</option>
-                        <option value="4">Baloncesto</option>
-                        <option value="5">Tenis</option>
-                        <option value="6">Pádel</option>
-                        <option value="7">Pista WindyCurveKarting</option>
-                        <option value="8">Pista SpeedFactory Indoor Karting</option>
+                        Seleccione una opción
+                        <option value="0">Fútbol 11</option>
+                        <option value="1">Fútbol 7</option>
+                        <option value="2">Fútbol Sala</option>
+                        <option value="3">Baloncesto</option>
+                        <option value="4">Tenis</option>
+                        <option value="5">Pádel</option>
+                        <option value="6">Pista WindyCurveKarting</option>
+                        <option value="7">Pista SpeedFactory Indoor Karting</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -151,7 +151,7 @@
                     <select class="form-control" id="horario" name="horario" required>
                         <option value="">Seleccione una opción</option>
                         <option value="0">10:00 a 14:00</option>
-                        <option value="1">17:00 a 22:00</option>
+                        <option value="1">17:00 a 21:00</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -162,7 +162,7 @@
                     <button type="submit" class="btn btn-primary">Registrar evento</button>
                 </div>
             </form>
-        </div>
+        </div>
         <br>
         <br>
         <br>
