@@ -135,6 +135,8 @@
         Mostrar las disponibles
         Selecciona Una y Se registra en la BD
     -->
+    <br>
+    <br>
     <h2 class="h1 font-weight-bold" style="margin-top=4rem; text-align: center;">Crea tu Propio Evento</h2>
         <div class="container">
             <form action="{{ route('eventos.guardar') }}" method="POST">
@@ -157,7 +159,28 @@
                         <option value="7">Pista SpeedFactory Indoor Karting</option>
                     </select>
                 </div>
-                
+                <div class="form-group">
+                    <label for="horario">Horario:</label>
+                    <select class="form-control" id="horario" name="horario" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="10:00-14:00">10:00 a 14:00</option>
+                        <option value="17:00-22:00">17:00 a 22:00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-primary">Registrar evento</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     @endauth
 
 
