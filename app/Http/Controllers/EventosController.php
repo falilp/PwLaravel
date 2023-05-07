@@ -18,20 +18,22 @@ class EventosController extends Controller
         $codUsuario = $usuario->getAuthIdentifier();
         
         $eventos = Eventos::all();
-        $evento_concreto = $eventos->where('codEvento', $codEvento);
-        $existe = $evento_concreto->where('codUsuario', $codUsuario);
-        $alta = true;
+        $evento_concreto = $eventos->where('Descripcion', $descripcion);
+        if($evento_concreto != null){
+            $existe = $evento_concreto->where('codUsuario', $codUsuario);
+        }else{
+            $existe = null;
+        }
 
         if($existe == null){
             $evento = new Eventos;
-            $evento->codEvento = $codEvento;
             $evento->tipoPista = $tipoPista;
             $evento->FechaEvento = $fechaEvento;
             $evento->Descripcion = $descripcion;
             $evento->categoria = 'Torneo';
             $evento->codUsuario = $codUsuario;
             $evento->save();
-            $alta = false;
+            
             return redirect()->route('home');
         }else{
             return redirect()->route('eventos');
