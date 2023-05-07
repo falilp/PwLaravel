@@ -64,7 +64,7 @@
                 <div class="card-body text-center">
                     <h4 class="card-title">Listas Pistas</h4>
                     <p class="card-text">Lista de todos las pistas.</p>
-                    <a href="" class="btn btn-primary">IR</a>
+                    <a href="{{ route('ListaPistas') }}" class="btn btn-primary">IR</a>
                 </div>
             </div>
         </div>
