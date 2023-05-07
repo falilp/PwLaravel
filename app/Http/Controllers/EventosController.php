@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Eventos;
+use App\Models\Pista;
 
 use Illuminate\Http\Request;
 
@@ -35,19 +36,41 @@ class EventosController extends Controller
         }
     }
 
-    public function alta_equipo($codEvento, $tipoPista, $descripcion, $fechaEvento){
+    public function guardar_evento() {
+
+    $fecha = $_POST['fecha'];
+    $pista = $_POST['pista'];
+    $horario = $_POST['horario'];
+    $descripcion = $_POST['descripcion'];
+
+    $fechasDisponible = Pista::all()->where('tipoPista', $pista);
+    if ($horario == 0) {
+        $fechasDisponible = $fechasDisponible->where('disponible', 0);
+        $fechasDisponible = $fechasDisponible->filter(function ($item) use ($fecha) {
+            return substr($item->HoraDisponible, 0, 10) == $fecha;
+        });
+        $fecha_datetime = new DateTime($fecha . " 10:00:00"); // combina la fecha con la hora específica
+        $bool = true;
+        foreach ($fechasDisponible as $i) {
+            $actual = $i->where('HoraDisponible', $fecha);
+            if ($actual->where('disponible', 1) && $bool == true) {
+                $bool = false;
+            }
+            date('H:i:s', strtotime($fecha. '+60 minutes'));
+        }
+        if ($bool == true) {
+            $evento = new Eventos;
+            $evento->tipoPista = $pista;
+            $evento->FechaEvento = $fecha;
+            $evento->Descripcion = $descripcion;
+            $evento->categoria = 'Torneo';
+            $evento->codUsuario = $codUsuario;
+            $evento->save();
+        }
+
+    } else {
 
     }
-
-    public function guardar_evento(Request $request)
-{
-    // Validar los datos enviados por el formulario
-    $validatedData = $request->validate([
-        'fecha' => 'required|date',
-        'pista' => 'required|string|max:255',
-        'horario' => 'required|string|max:255',
-        'descripcion' => 'required|string|max:255',
-    ]);
 
     // Crear un nuevo objeto Evento con los datos validados
     $evento = new Eventos([

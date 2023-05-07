@@ -150,8 +150,8 @@
                     <label for="horario">Horario:</label>
                     <select class="form-control" id="horario" name="horario" required>
                         <option value="">Seleccione una opción</option>
-                        <option value="10:00-14:00">10:00 a 14:00</option>
-                        <option value="17:00-22:00">17:00 a 22:00</option>
+                        <option value="0">10:00 a 14:00</option>
+                        <option value="1">17:00 a 22:00</option>
                     </select>
                 </div>
                 <div class="form-group">
