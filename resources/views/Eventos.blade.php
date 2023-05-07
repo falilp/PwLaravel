@@ -17,11 +17,11 @@
     <br />
     <!-- Espacio informativo -->
         <div class="container py-5">
-        <h2 class="h1 font-weight-bold" style="margin-top=4rem;">Bienvenidos a la sección de Eventos de KMB</h2>
+        <h2 class="h1 font-weight-bold" style="margin-top=4rem; text-align: center;">Bienvenidos a la sección de Eventos de KMB</h2>
         <div class="row">
             <div class="col-lg-10 mb-4">
                 <p class="font-italic text-muted">Organiza tus propios eventos y diviértete en compañía con familiares y amigos.</p>
-                <p class="font-italic text-muted">En nuestras instalaciones se pueden organizar dos clases de eventos: torneos y cumpleaños.</p>
+                <p class="font-italic text-muted">En nuestras instalaciones se pueden organizar todo tipo de eventos.</p>
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@
 		<div class="h1 font-weight-bold" id="pageHeaderTitle">Los eventos que tenemos disponibles son:</div>
 
 		<article class="postcard light blue">
-            <img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+            <img class="postcard__img" src="https://celebreak.com/wp-content/uploads/2022/03/futbol-11.jpg" alt="Image Title" />
 			<div class="postcard__text t-dark">
 				<h1 class="h1 font-weight-bold">Copa Gallo</h1>
 				<div class="postcard__subtitle small">
@@ -63,13 +63,11 @@
                                 </form>
                                 <br>
                                 <form action="{{ route('FormularioEquipo', ['codEvento' => 1, 'tipoPista' => 0, 'descripcion' => 'Copa Gallo', 'fechaEvento' => '2023-05-14 10:00:00']) }}" method="post">
-                                                @csrf
-                                                <button type="submit" class="btn btn-dark">Darse de Alta Equipo</button>
                                 </form>
 			</div>
 		</article>
 		<article class="postcard light red">
-            <img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+            <img class="postcard__img" src="https://media.smartbox.com/pim/1760507.jpg?thumbor=640x480" alt="Image Title" />
 			<div class="postcard__text t-dark">
 				<h1 div class="h1 font-weight-bold">Gran Premio de Conil</h1>
 				<div class="postcard__subtitle small">
@@ -95,7 +93,7 @@
 			</div>
 		</article>
 		<article class="postcard light green">
-				<img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+				<img class="postcard__img" src="https://cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/DIEW37FGTRDR3DTZIJDYNRV4ZY.jpg" alt="Image Title" />
 			<div class="postcard__text t-dark">
                 <div class="h1 font-weight-bold">Hoops Frenzy</div>
 				<div class="postcard__subtitle small">
@@ -118,23 +116,12 @@
                                                 <button type="submit" class="btn btn-dark">Darse de Alta Individual</button>
                                 </form>
                                 <br>
-                                <form action="{{ route('FormularioEquipo', ['codEvento' => 3, 'tipoPista' => 6, 'descripcion' => 'Hoops Frenzy', 'fechaEvento' => '2023-05-12 10:00:00']) }}" method="post">
-                                                @csrf
-                                                <button type="submit" class="btn btn-dark">Darse de Alta Equipo</button>
+                                <form action="{{ route('FormularioEquipo', ['codEvento' => 3, 'tipoPista' => 6, 'descripcion' => 'Hoops Frenzy', 'fechaEvento' => '2023-05-12 10:00:00']) }}" method="post">                  
                                 </form>
 			</div>
 		</article>
 	</div>
 </section>
-        <!-- Botones para registrar eventos -->
-
-    <!--Formulario de Registro de Evento-->
-    <!--
-        Tiene que marcar primero la fecha, y la pista
-        Despues mira los dias disponibles; que este libre o de 10:00 a 14:00 o de 17:00 a 22:00
-        Mostrar las disponibles
-        Selecciona Una y Se registra en la BD
-    -->
     <br>
     <br>
     <h2 class="h1 font-weight-bold" style="margin-top=4rem; text-align: center;">Crea tu Propio Evento</h2>
@@ -149,14 +136,14 @@
                     <label for="pista">Tipo de pista:</label>
                     <select class="form-control" id="pista" name="pista" required>
                         <option value="">Seleccione una opción</option>
-                        <option value="0">Fútbol 11</option>
-                        <option value="1">Fútbol 7</option>
-                        <option value="2">Fútbol Sala</option>
-                        <option value="3">Baloncesto</option>
-                        <option value="4">Tenis</option>
-                        <option value="5">Pádel</option>
-                        <option value="6">Pista WindyCurveKarting</option>
-                        <option value="7">Pista SpeedFactory Indoor Karting</option>
+                        <option value="1">Fútbol 11</option>
+                        <option value="2">Fútbol 7</option>
+                        <option value="3">Fútbol Sala</option>
+                        <option value="4">Baloncesto</option>
+                        <option value="5">Tenis</option>
+                        <option value="6">Pádel</option>
+                        <option value="7">Pista WindyCurveKarting</option>
+                        <option value="8">Pista SpeedFactory Indoor Karting</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -182,7 +169,6 @@
         <br>
         <br>
     @endauth
-
 
 
 <!--footer-->

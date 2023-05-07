@@ -43,8 +43,7 @@
                 <i class="fas fa-gem me-3"></i>KMB
             </h6>
             <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit.
+                Bienvenido a KMB Sports, el monopolio deportivo que jamás hubieras creído que exista.
             </p>
             </div>
             <!-- Grid column -->
@@ -71,7 +70,7 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
-            <p><i class="fas fa-home me-3"></i> Cádiz, Conil de la Frontera 11500, España</p>
+            <p><i class="fas fa-home me-3"></i> Cádiz, Puerto Real 11500, España</p>
             <p>
                 <i class="fas fa-envelope me-3"></i>
                 KMB@gmail.com
@@ -88,7 +87,7 @@
 
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2021 Copyright:
+        © 2023 Copyright:
         <a class="text-reset fw-bold" href="https://mdbootstrap.com/">KMB.com</a>
     </div>
     <!-- Copyright -->
