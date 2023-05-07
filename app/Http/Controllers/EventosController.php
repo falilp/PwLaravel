@@ -22,7 +22,7 @@ class EventosController extends Controller
         $existe = $evento_concreto->where('codUsuario', $codUsuario);
         $alta = true;
 
-        if($existe != null){
+        if($existe == null){
             $evento = new Eventos;
             $evento->codEvento = $codEvento;
             $evento->tipoPista = $tipoPista;
