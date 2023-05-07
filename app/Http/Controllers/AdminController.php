@@ -65,6 +65,12 @@ class AdminController extends Controller{
         }
     }
 
+    static function ModificarPista(){
+        if(Auth::user()->Permisos == 1){
+            
+        }
+    }
+
     public function ListaUsuarios(){
         if(Auth::user()->Permisos == 1){
             return view("UsuariosLista");
@@ -73,7 +79,27 @@ class AdminController extends Controller{
 
     static function devolverListaUsuarios(){
         if(Auth::user()->Permisos == 1){
-            return User::all();;
+            return User::all();
+        }
+    }
+
+    public function ModificarUsuario(User $usuario){
+        if(Auth::user()->Permisos == 1){
+            return view("ModificarUsuario", ['usuario' => $usuario]);
+        }
+    }
+
+    public function actualizar(Request $request,$id){
+        if(Auth::user()->Permisos == 1){
+            $usuario = User::find($id);
+            $usuario->nombre = $request->input('NombreUsuario');
+            $usuario->apellidos = $request->input('ApellidosUsuario');
+            $usuario->email = $request->input('EmailUsuario');
+            $usuario->telefono = $request->input('TelefonoUsuario');
+            $usuario->Permisos = $request->input('PermisosUsuario');
+            $usuario->save();
+
+            return redirect('/ListaUsuarios');
         }
     }
 
@@ -85,7 +111,13 @@ class AdminController extends Controller{
 
     static function devolverListaAlquiler(){
         if(Auth::user()->Permisos == 1){
-            return Alquiler::all();;
+            return Alquiler::all();
+        }
+    }
+
+    public function ModificarAlquiler(){
+        if(Auth::user()->Permisos == 1){
+            
         }
     }
 
@@ -97,7 +129,13 @@ class AdminController extends Controller{
 
     static function devolverListaEventos(){
         if(Auth::user()->Permisos == 1){
-            return Eventos::all();;
+            return Eventos::all();
+        }
+    }
+
+    public function ModificarEvento(){
+        if(Auth::user()->Permisos == 1){
+            
         }
     }
 }

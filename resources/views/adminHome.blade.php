@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="card bg" style="width:400px">
-                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/Q823-830Ri0AAAAM/christian-bale-american-psycho.gif" alt="Card image">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/mo712eJxf5MAAAAM/bean-sh00t4.gif" alt="Card image">
                 <div class="card-body text-center">
                     <h4 class="card-title">Eventos</h4>
                     <p class="card-text">Lista con todos los eventos.</p>
@@ -52,10 +52,10 @@
                 </div>
             </div>
             <div class="card bg" style="width:400px">
-                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/GZgrtsucMK0AAAAi/discord-discordgifemoji.gif" alt="Card image">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/EvlqP8uONUMAAAAC/lagg-evangelion.gif" alt="Card image">
                 <div class="card-body text-center">
                     <h4 class="card-title">Eliminar Pistas</h4>
-                    <p class="card-text">Eliminara las pistas al dia anterior al que se ejecuta.</p>
+                    <p class="card-text">Eliminara las pistas previas a hoy.</p>
                     <a href="{{ route('EliminarPistas') }}" class="btn btn-primary">IR</a>
                 </div>
             </div>
