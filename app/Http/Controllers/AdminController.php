@@ -85,14 +85,14 @@ class AdminController extends Controller{
         }
     }
 
-    public function actualizarPista(Request $request,$pista){
+    public function actualizarPista(Request $request,$codPista){
         if(Auth::user()->Permisos == 1){
-            $pista = Pista::find($pista);
-            $pista->nombre = $request->input('NombreUsuario');
-            $pista->apellidos = $request->input('ApellidosUsuario');
-            $pista->email = $request->input('EmailUsuario');
-            $pista->telefono = $request->input('TelefonoUsuario');
-            $pista->Permisos = $request->input('PermisosUsuario');
+            $pista = Pista::find($codPista);
+            $pista->tipoPista = $request->input('tipPis');
+            $pista->precioHora = $request->input('presio');
+            $pista->disponible = $request->input('dis');
+            $pista->mensaje = $request->input('Mensaje');
+            $pista->HoraDisponible = $request->input('Hdisponible');
             $pista->save();
 
             return redirect('/ListaPistas');
@@ -145,18 +145,18 @@ class AdminController extends Controller{
 
     public function ModificarAlquiler(Alquiler $alquiler){
         if(Auth::user()->Permisos == 1){
-            return view("ModificarUsuario", ['alquiler' => $alquiler]);
+            return view("ModificarAlquiler", ['alquiler' => $alquiler]);
         }
     }
 
-    public function actualizarAlquiler(Request $request,$id){
+    public function actualizarAlquiler(Request $request,$codPista){
         if(Auth::user()->Permisos == 1){
-            $alquiler = Alquiler::find($id);
-            $alquiler->nombre = $request->input('NombreUsuario');
-            $alquiler->apellidos = $request->input('ApellidosUsuario');
-            $alquiler->email = $request->input('EmailUsuario');
-            $alquiler->telefono = $request->input('TelefonoUsuario');
-            $alquiler->Permisos = $request->input('PermisosUsuario');
+            $alquiler = Alquiler::find($codPista);
+            $alquiler->codPista = $request->input('codPis');
+            $alquiler->codUsuario = $request->input('codUsu');
+            $alquiler->fecha_alquiler = $request->input('fechAlq');
+            $alquiler->precio = $request->input('precio');
+            $alquiler->descuento = $request->input('desc');
             $alquiler->save();
 
             return redirect('/ListaAlquiler');
@@ -175,20 +175,20 @@ class AdminController extends Controller{
         }
     }
 
-    public function ModificarEveno(Eventos $evento){
+    public function ModificarEvento(Eventos $evento){
         if(Auth::user()->Permisos == 1){
-            return view("ModificarUsuario", ['evento' => $evento]);
+            return view("ModificarEvento", ['evento' => $evento]);
         }
     }
 
-    public function actualizarEvento(Request $request,$id){
+    public function actualizarEvento(Request $request,$codEvento){
         if(Auth::user()->Permisos == 1){
-            $evento = Alquiler::find($id);
-            $evento->nombre = $request->input('NombreUsuario');
-            $evento->apellidos = $request->input('ApellidosUsuario');
-            $evento->email = $request->input('EmailUsuario');
-            $evento->telefono = $request->input('TelefonoUsuario');
-            $evento->Permisos = $request->input('PermisosUsuario');
+            $evento = Eventos::find($codEvento);
+            $evento->codPista = $request->input('codPis');
+            $evento->FechaEvento = $request->input('fechEven');
+            $evento->Descripcion = $request->input('desc');
+            $evento->categoria = $request->input('cat');
+            $evento->codUsuario = $request->input('codUsu');
             $evento->save();
 
             return redirect('/ListaEventos');

@@ -37,7 +37,7 @@
                             <td>{{$alq->precio}}</td>                                
                             <td>{{$alq->descuento}}</td>
                             <td><button class="btn btn-danger">Eliminar</button></td>
-                            <td><button class="btn btn-primary">Modificar</button></td>
+                            <td><a href="{{ route('ModificarAlquiler', $alq) }}" class="btn btn-primary">Modificar</a></td>
                         </tr>
                     @endforeach
                 </tbody>

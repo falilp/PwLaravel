@@ -12,7 +12,7 @@
                 <thead>
                     <tr class="text-center">
                     <th scope="col">#</th>
-                    <th scope="col">Codigo psita</th>
+                    <th scope="col">Codigo pista</th>
                     <th scope="col">Tipo pista</th>
                     <th scope="col">Precio hora</th>
                     <th scope="col">Disponible</th>
