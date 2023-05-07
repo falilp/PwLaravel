@@ -18,7 +18,9 @@
         <div style="Display: flex;">
                 <div class="card-body p-4 p-lg-5 text-black" >
                     <br>
-                    <form method="POST" action="" ">
+                    <form method="POST" action="{{ route('ActualizarUsuario') }}">
+                        @csrf
+                        @method('PUT')
                         <div class="d-flex align-items-center mb-3 pb-1">
                             <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
                             <span class="h1 font-weight-bold">Datos del Usuario</span>
@@ -26,32 +28,22 @@
 
                         <div class="form-outline mb-4">
                             <label class="form-label font-italic text-muted" for="NombreUsuario"> Nombre:</label>
-                            <input type="text" id="NombreUsuario" name="NombreUsuario" class="form-control form-control-lg" value= <?php echo $usuario->nombre; ?> >
+                            <input type="text" id="NombreUsuario" name="NombreUsuario" class="form-control form-control-lg" value= "<?php echo $usuario->nombre; ?>" >
                         </div>
                         
                         <div class="form-outline mb-4">
                             <label class="form-label font-italic text-muted" for="ApellidosUsuario">Apellidos:</label>
-                            <input type="text" id="ApellidosUsuario" name="ApellidosUsuario" class="form-control form-control-lg" value= <?php echo $usuario->apellidos; ?>>
+                            <input type="text" id="ApellidosUsuario" name="ApellidosUsuario" class="form-control form-control-lg" value= "<?php echo $usuario->apellidos;?>">
                         </div>
                         
                         <div class="form-outline mb-4">
                             <label class="form-label font-italic text-muted" for="EmailUsuario">Email:</label>
-                            <input type="email" id="EmailUsuario" name="EmailUsuario" class="form-control form-control-lg" value= <?php echo $usuario->email; ?>>
+                            <input type="email" id="EmailUsuario" name="EmailUsuario" class="form-control form-control-lg" value= "<?php echo $usuario->email; ?>">
                         </div> 
 
                         <div class="form-outline mb-4">
                             <label class="form-label font-italic text-muted" for="TelefonoUsuario">Telefono:</label>
-                            <input type="number" id="TelefonoUsuario" name="TelefonoUsuario" class="form-control form-control-lg" value= <?php echo $usuario->telefono; ?>>
-                        </div>
-
-                        <div class="form-outline mb-4">
-                            <label class="form-label font-italic text-muted" for="ContraUsuario">Contraseña:</label>
-                            <input type="password" id="ContraUsuario" name="ContraUsuario" class="form-control form-control-lg">
-                        </div>
-
-                        <div class="form-outline mb-4">
-                            <label class="form-label font-italic text-muted" for="ConfirUsuario">Confirmar Contraseña:</label>
-                            <input type="password" id="ConfirUsuario" name="ConfirUsuario" class="form-control form-control-lg">
+                            <input type="number" id="TelefonoUsuario" name="TelefonoUsuario" class="form-control form-control-lg" value= "<?php echo $usuario->telefono; ?>">
                         </div>
 
                         <div class="pt-1 mb-4">
