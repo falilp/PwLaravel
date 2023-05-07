@@ -32,8 +32,9 @@ Route::get('/profile', 'App\Http\Controllers\ProfileController@index')->name('pr
 Route::get('/pistas', 'App\Http\Controllers\PistasController@index')->name('pistas');
 
 Route::get('/eventos', 'App\Http\Controllers\EventosController@index')->name('eventos');
-Route::get('/eventos/torneo', 'App\Http\Controllers\EventosController@index')->name('crear_torneo');
-Route::get('/eventos/cumple', 'App\Http\Controllers\EventosController@index')->name('crear_cumple');
+Route::post('/eventos/torneo/{codEvento}/{tipoPista}/{descripcion}/{fechaEvento}', 'App\Http\Controllers\EventosController@alta_individual')->name('Eventos.registro_indv');
+Route::get('/eventos/torneo/Registro/Equipo/{codEvento}/{tipoPista}/{descripcion}/{fechaEvento}', 'App\Http\Controllers\FormularioEquipoController@index')->name('FormularioEquipo');
+
 
 Route::get('/circuitos', 'App\Http\Controllers\CircuitosController@index')->name('circuitos');
 
@@ -51,7 +52,7 @@ Route::get('/Profile/ReservaUsuario', 'App\Http\Controllers\ReservaUsuarioContro
 Route::get('/Profile/EventosUsuario', 'App\Http\Controllers\EventosUsuarioController@index')->name('EventosUsuario');
 
 Route::post('/Profile/ReservaUsuario/EliminarReserva/{codPista}', 'App\Http\Controllers\ReservaUsuarioController@eliminar_reserva')->name('ReservaUsuario.eliminar_reserva');
-
+Route::post('/eventos', 'App\Http\Controllers\EventosController@guardar_evento')->name('eventos.guardar');
 
 Route::get('/admin', [AdminController::class, 'Home'])->name('adminHome');
 

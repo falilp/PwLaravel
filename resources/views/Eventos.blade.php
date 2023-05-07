@@ -34,41 +34,16 @@
         </div>
     @endguest
     @auth
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-    </div>
-        <!-- Botones para registrar eventos -->
-        <h2 class="h3 font-weight-bold" style="margin-top=4rem;">Los eventos que tenemos disponibles son:</h2>
-            <div style="display:flex; ">
-            <div class="col-md-4">
-                        <div class="card">
-                            <img src="https://www.afe-futbol.com/wp-content/uploads/2021/11/784A0873-1920x1080-1-1920x1080.jpg" class="card-img-top" alt="Imagen de cumpleaños">
-                            <div class="card-body">
-                                <div class="h5 font-weight-bold">Copa Gallo</div>
-                                <p class="font-italic text-muted"><strong>Descripción:</strong></p>
+<section class="light">
+	<div class="container py-2">
+		<div class="h1 font-weight-bold" id="pageHeaderTitle">Los eventos que tenemos disponibles son:</div>
+
+		<article class="postcard light blue">
+            <img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+			<div class="postcard__text t-dark">
+				<h1 class="h1 font-weight-bold">Copa Gallo</h1>
+				<div class="postcard__subtitle small">
+                <p class="font-italic text-muted"><strong>Descripción:</strong></p>
                                 <ul>
                                     <li><p class="font-italic text-muted">Torneo de Fútbol 11</p></li>
                                     <li><p class="font-italic text-muted">14/05/2023</p></li>
@@ -82,18 +57,23 @@
                                         </ul>
                                     </p></li>
                                 </ul>
-                                <a href="{{ route('crear_cumple') }}" class="btn btn-dark">Darse de Alta Individual</a>
-                                <a href="{{ route('crear_cumple') }}" class="btn btn-dark">Dar de Alta Equipo</a>
-                            </div>
-                        </div>
-                    </div>
-
-                <div class="col-md-4">
-                        <div class="card">
-                            <img src="https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2020/2/3/a7986oewd072ztxuucwq/play-and-drive-kart-electrico-meura-canto" class="card-img-top" alt="Imagen de cumpleaños">
-                            <div class="card-body">
-                                <div class="h5 font-weight-bold">Gran Premio de Conil</div>
-                                <p class="font-italic text-muted"><strong>Descripción:</strong></p>
+                                <form action="{{ route('Eventos.registro_indv', ['codEvento' => 1, 'tipoPista' => 0, 'descripcion' => 'Copa Gallo', 'fechaEvento' => '2023-05-14 10:00:00']) }}" method="post">
+                                                @csrf
+                                                <button type="submit" class="btn btn-dark">Darse de Alta Individual</button>
+                                </form>
+                                <br>
+                                <form action="{{ route('FormularioEquipo', ['codEvento' => 1, 'tipoPista' => 0, 'descripcion' => 'Copa Gallo', 'fechaEvento' => '2023-05-14 10:00:00']) }}" method="post">
+                                                @csrf
+                                                <button type="submit" class="btn btn-dark">Darse de Alta Equipo</button>
+                                </form>
+			</div>
+		</article>
+		<article class="postcard light red">
+            <img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+			<div class="postcard__text t-dark">
+				<h1 div class="h1 font-weight-bold">Gran Premio de Conil</h1>
+				<div class="postcard__subtitle small">
+                <p class="font-italic text-muted"><strong>Descripción:</strong></p>
                                 <ul>
                                     <li><p class="font-italic text-muted">Torneo de Karting</p></li>
                                     <li><p class="font-italic text-muted"><strong>Circuito:</strong> WindyCurveKarting</p></li>
@@ -108,18 +88,18 @@
                                         </ul>
                                     </p></li>
                                 </ul>
-                                <a href="{{ route('crear_cumple') }}" class="btn btn-dark">Darse de Alta Individual</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                        <div class="card">
-                            <img src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/03/08/16467778867887.jpg" class="card-img-top" alt="Imagen de cumpleaños">
-                            <div class="card-body">
-                                <div class="h5 font-weight-bold">Hoops Frenzy</div>
-                                <p class="font-italic text-muted"><strong>Descripción:</strong></p>
+                                <form action="{{ route('Eventos.registro_indv', ['codEvento' => 2, 'tipoPista' => 3, 'descripcion' => 'Gran Premio Conil', 'fechaEvento' => '2023-05-13 10:00:00']) }}" method="post">
+                                                @csrf
+                                                <button type="submit" class="btn btn-dark">Darse de Alta Individual</button>
+                                </form>
+			</div>
+		</article>
+		<article class="postcard light green">
+				<img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+			<div class="postcard__text t-dark">
+                <div class="h1 font-weight-bold">Hoops Frenzy</div>
+				<div class="postcard__subtitle small">
+                <p class="font-italic text-muted"><strong>Descripción:</strong></p>
                                 <ul>
                                     <li><p class="font-italic text-muted">Torneo de Baloncesto 5 vs 5</p></li>
                                     <li><p class="font-italic text-muted">12/05/2023</p></li>
@@ -133,16 +113,21 @@
                                         </ul>
                                     </p></li>
                                 </ul>
-                                <a href="{{ route('crear_cumple') }}" class="btn btn-dark">Darse de Alta Individual</a>
-                                <a href="{{ route('crear_cumple') }}" class="btn btn-dark">Darse de Alta Equipo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </div>
+                                <form action="{{ route('Eventos.registro_indv', ['codEvento' => 3, 'tipoPista' => 6, 'descripcion' => 'Hoops Frenzy', 'fechaEvento' => '2023-05-12 10:00:00']) }}" method="post">
+                                                @csrf
+                                                <button type="submit" class="btn btn-dark">Darse de Alta Individual</button>
+                                </form>
+                                <br>
+                                <form action="{{ route('FormularioEquipo', ['codEvento' => 3, 'tipoPista' => 6, 'descripcion' => 'Hoops Frenzy', 'fechaEvento' => '2023-05-12 10:00:00']) }}" method="post">
+                                                @csrf
+                                                <button type="submit" class="btn btn-dark">Darse de Alta Equipo</button>
+                                </form>
+			</div>
+		</article>
+	</div>
+</section>
+        <!-- Botones para registrar eventos -->
 
-    <h2 class="h1 font-weight-bold" style="margin-top=4rem;">Crea tu Propio Evento</h2>
     <!--Formulario de Registro de Evento-->
     <!--
         Tiene que marcar primero la fecha, y la pista
@@ -150,6 +135,29 @@
         Mostrar las disponibles
         Selecciona Una y Se registra en la BD
     -->
+    <h2 class="h1 font-weight-bold" style="margin-top=4rem; text-align: center;">Crea tu Propio Evento</h2>
+        <div class="container">
+            <form action="{{ route('eventos.guardar') }}" method="POST">
+                @csrf <!-- Token CSRF para protección de ataques -->
+                <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" class="form-control" id="fecha" name="fecha" required>
+                </div>
+                <div class="form-group">
+                    <label for="pista">Tipo de pista:</label>
+                    <select class="form-control" id="pista" name="pista" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="0">Fútbol 11</option>
+                        <option value="1">Fútbol 7</option>
+                        <option value="2">Fútbol Sala</option>
+                        <option value="3">Baloncesto</option>
+                        <option value="4">Tenis</option>
+                        <option value="5">Pádel</option>
+                        <option value="6">Pista WindyCurveKarting</option>
+                        <option value="7">Pista SpeedFactory Indoor Karting</option>
+                    </select>
+                </div>
+                
     @endauth
 
 
