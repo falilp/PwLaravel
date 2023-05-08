@@ -11,7 +11,7 @@
         <div style="Display: flex;width: 70%; margin:0 auto;">
                 <div class="card-body p-4 p-lg-5 text-black">
                     <br>
-                    <form method="POST" action="{{ route('actualizar', ['id' => $usuario->id]) }}">
+                    <form method="POST" action="{{ route('actualizarUser', ['id' => $usuario->id]) }}">
                         @csrf
                         @method('PUT')
                         <div class="d-flex align-items-center mb-3 pb-1">
