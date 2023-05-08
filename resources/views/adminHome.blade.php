@@ -16,54 +16,48 @@
 @endsection
 
 <body>
-    <div style="background: url(https://fondosmil.com/fondo/5819.jpg); height: 100vh; background-size: cover;" class="img-fluid jumbotron bg-cover text-black">
+    <div style="text-align: center;" class="img-fluid jumbotron bg-cover text-black" >
         </br>
         <div class="card-columns" style="margin-left:200px">
             <div class="card bg" style="width:400px">
-                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/DtdzIpwIgyUAAAAC/me_listening_to1700_sea_shanties-pirate.gif" alt="Card image">
                 <div class="card-body text-center">
-                    <h4 class="card-title">Usuarios</h4>
-                    <p class="card-text">Lista con todos los usuario.</p>
+                    <h4 class="h3 font-weight-bold">Usuarios</h4>
+                    <p class="font-italic text-muted" >Lista con todos los usuario.</p>
                     <a href="{{ route('ListaUsuarios') }}"  class="btn btn-primary">IR</a>
                 </div>
             </div>
             <div class="card bg" style="width:400px">
-                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/T3RbJGtBwFMAAAAi/meme.gif" alt="Card image">
                 <div class="card-body text-center">
-                    <h4 class="card-title">Alquileres</h4>
-                    <p class="card-text">Lista con todos los alquileres.</p>
+                    <h4 class="h3 font-weight-bold">Alquileres</h4>
+                    <p class="font-italic text-muted">Lista con todos los alquileres.</p>
                     <a href="{{ route('ListaAlquiler') }}"class="btn btn-primary">IR</a>
                 </div>
             </div>
             <div class="card bg" style="width:400px">
-                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/mo712eJxf5MAAAAM/bean-sh00t4.gif" alt="Card image">
                 <div class="card-body text-center">
-                    <h4 class="card-title">Eventos</h4>
-                    <p class="card-text">Lista con todos los eventos.</p>
+                    <h4 class="h3 font-weight-bold">Eventos</h4>
+                    <p class="font-italic text-muted">Lista con todos los eventos.</p>
                     <a href="{{ route('ListaEventos') }}" class="btn btn-primary">IR</a>
                 </div>
             </div>
             <div class="card bg" style="width:400px">
-                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/riJC5SfPlY0AAAAC/american-psycho.gif" alt="Card image">
                 <div class="card-body text-center">
-                    <h4 class="card-title">Generar Pistas</h4>
-                    <p class="card-text">Realizar los Domingos</p>
+                    <h4 class="h3 font-weight-bold">Generar Pistas</h4>
+                    <p class="font-italic text-muted">Realizar los Domingos</p>
                     <a href="{{ route('GenerarPistas') }}" class="btn btn-primary">IR</a>
                 </div>
             </div>
             <div class="card bg" style="width:400px">
-                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/EvlqP8uONUMAAAAC/lagg-evangelion.gif" alt="Card image">
                 <div class="card-body text-center">
-                    <h4 class="card-title">Eliminar Pistas</h4>
-                    <p class="card-text">Eliminara las pistas previas a hoy.</p>
+                    <h4 class="h3 font-weight-bold">Eliminar Pistas</h4>
+                    <p class="font-italic text-muted">Eliminara las pistas previas a hoy.</p>
                     <a href="{{ route('EliminarPistas') }}" class="btn btn-primary">IR</a>
                 </div>
             </div>
             <div class="card bg" style="width:400px">
-                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/GZgrtsucMK0AAAAi/discord-discordgifemoji.gif" alt="Card image">
                 <div class="card-body text-center">
-                    <h4 class="card-title">Listas Pistas</h4>
-                    <p class="card-text">Lista de todos las pistas.</p>
+                    <h4 class="h3 font-weight-bold">Listas Pistas</h4>
+                    <p class="font-italic text-muted">Lista de todos las pistas.</p>
                     <a href="{{ route('ListaPistas') }}" class="btn btn-primary">IR</a>
                 </div>
             </div>

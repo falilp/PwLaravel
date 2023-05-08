@@ -34,7 +34,7 @@ class EventosController extends Controller
             $evento->codUsuario = $codUsuario;
             $evento->save();
             
-            return redirect()->route('home');
+            return redirect()->route('EventosUsuario');
         }else{
             return redirect('http://localhost/PwLaravel/public/eventos/modal#openModal');
         }
@@ -84,7 +84,7 @@ class EventosController extends Controller
         $evento->save();
     
         // Redirigir al usuario a la página de lista de eventos con un mensaje de confirmación
-        return redirect()->route('home');
+        return redirect()->route('EventosUsuario');
 
         }else{
             //Indicamos al usuario que no hay hueco para la reserva
