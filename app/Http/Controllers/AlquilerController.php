@@ -87,7 +87,7 @@ class AlquilerController extends Controller
             }
         }
         
-        return redirect()->route('home');
+        return redirect()->route('ReservaUsuario');
     }
 }
 
