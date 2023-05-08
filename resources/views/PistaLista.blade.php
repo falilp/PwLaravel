@@ -38,7 +38,10 @@
                             <td>{{$pista->disponible}}</td>                                
                             <td>{{$pista->mensaje}}</td>
                             <td>{{$pista->HoraDisponible}}</td>
-                            <td><button class="btn btn-danger">Eliminar</button></td>
+                            <form action="{{ route('EliminarPista', $pista->codPista) }}" method="post">
+                                @csrf
+                                <td><button type="submit" class="btn btn-danger">Eliminar</button></td>
+                            </form>
                             <td><a href="{{ route('ModificarPista', $pista) }}" class="btn btn-primary">Modificar</a></td>
                         </tr>
                     @endforeach

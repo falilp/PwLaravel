@@ -36,7 +36,10 @@
                             <td>{{$usuario->email}}</td>
                             <td>{{$usuario->telefono}}</td>                                
                             <td>{{$usuario->Permisos}}</td>
-                            <td><button class="btn btn-danger">Eliminar</button></td>
+                            <form action="{{ route('EliminarUser', $usuario->id) }}" method="post">
+                                @csrf
+                                <td><button type="submit" class="btn btn-danger">Eliminar</button></td>
+                            </form>
                             <td><a href="{{ route('ModificarUsuario', $usuario) }}" class="btn btn-primary">Modificar</a></td>
                         </tr>
                     @endforeach

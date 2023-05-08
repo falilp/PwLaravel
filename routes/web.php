@@ -63,6 +63,7 @@ Route::get('/admin', [AdminController::class, 'Home'])->name('adminHome');
 
 Route::get('/GenerarPistas', [AdminController::class, 'GenerarPistas'])->name('GenerarPistas');
 Route::get('/EliminarPistas', [AdminController::class, 'EliminarPistas'])->name('EliminarPistas');
+Route::post('/EliminarPista/{codPista}', [AdminController::class, 'EliminarPista'])->name('EliminarPista');
 Route::get('/ListaPistas', [AdminController::class, 'ListaPistas'])->name('ListaPistas');
 Route::get('/ModificarPista/{pista}', [AdminController::class, 'ModificarPista'])->name('ModificarPista');
 Route::put('/actualizarPista/{codPista}', [AdminController::class, 'actualizarPista'])->name('actualizarPista');
@@ -70,15 +71,17 @@ Route::put('/actualizarPista/{codPista}', [AdminController::class, 'actualizarPi
 Route::get('/ListaUsuarios', [AdminController::class, 'ListaUsuarios'])->name('ListaUsuarios');
 Route::get('/ModificarUsuario/{usuario}', [AdminController::class, 'ModificarUsuario'])->name('ModificarUsuario');
 Route::put('/actualizarUser/{id}', [AdminController::class, 'actualizarUser'])->name('actualizarUser');
+Route::post('/EliminarUser/{id}', [AdminController::class, 'EliminarUser'])->name('EliminarUser');
 
 Route::get('/ListaEventos', [AdminController::class, 'ListaEventos'])->name('ListaEventos');
 Route::get('/ModificarEvento/{evento}', [AdminController::class, 'ModificarEvento'])->name('ModificarEvento');
 Route::put('/actualizarEvento/{codEvento}', [AdminController::class, 'actualizarEvento'])->name('actualizarEvento');
+Route::post('/EliminarEvento/{codEvento}', [AdminController::class, 'EliminarEvento'])->name('EliminarEvento');
 
 Route::get('/ListaAlquiler', [AdminController::class, 'ListaAlquiler'])->name('ListaAlquiler');
 Route::get('/ModificarAlquiler/{alquiler}', [AdminController::class, 'ModificarAlquiler'])->name('ModificarAlquiler');
 Route::put('/actualizarAlquiler/{codPista}', [AdminController::class, 'actualizarAlquiler'])->name('actualizarAlquiler');
-
+Route::post('/EliminarAlquiler/{codPista}', [AdminController::class, 'EliminarAlquiler'])->name('EliminarAlquiler');
 
 Route::middleware([
     'auth:sanctum',

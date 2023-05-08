@@ -65,6 +65,26 @@ class AdminController extends Controller{
         }
     }
 
+    public function EliminarPista($codPista){
+        $pista = Pista::where('codPista', $codPista)->first();
+        if($pista){
+            Pista::destroy($codPista);
+            $pista->save();
+
+            $alquiler = Alquiler::where('codPista', $codPista)->first();
+            if($alquiler){
+                Alquiler::destroy($codPista);
+            }
+
+            $evento = Eventos::where('codPista', $codPista)->first();
+            if($evento){
+                Eventos::destroy($codPista);
+            }
+        }
+        
+        return redirect("ListaPistas");
+    }
+
     public function ListaPistas(){
         if(Auth::user()->Permisos == 1){
             return view("PistaLista");
@@ -131,6 +151,30 @@ class AdminController extends Controller{
         }
     }
 
+    public function EliminarUser($id){
+        $user = User::where('id', $id)->first();
+        if($user){
+            $alquiler = Alquiler::where('codUsuario', $id)->get();
+            foreach($alquiler as $alq){
+                $codPista = $alq->codPista;
+                Alquiler::destroy($alq);
+                $pistas = Pista::where('codPista', $codPista)->get();
+                foreach($pistas as $pista){
+                    $pista->disponible = 0;
+                    $pista->save();
+                }
+            }
+
+            $evento = Eventos::where('codUsuario', $id)->get();
+            foreach($evento as $eve){
+                Eventos::destroy($eve);
+            }
+            User::destroy($id);
+            $user->save();
+        }
+        return redirect("ListaUsuarios");
+    }
+
     public function ListaAlquiler(){
         if(Auth::user()->Permisos == 1){
             return view("AlquilerLista");
@@ -163,6 +207,22 @@ class AdminController extends Controller{
         }
     }
 
+    public function EliminarAlquiler($codPista){
+        $alquiler = Alquiler::where('codPista', $codPista)->first();
+        if($alquiler){
+            Alquiler::destroy($codPista);
+            $alquiler->save();
+            
+            $pistas = Pista::where('codPista', $codPista)->first();
+            if($pistas){
+                $pistas->disponible = 0;
+                $pistas->save();
+            }
+        }
+        
+        return redirect("ListaAlquiler");
+    }
+
     public function ListaEventos(){
         if(Auth::user()->Permisos == 1){
             return view("EventosLista");
@@ -193,5 +253,22 @@ class AdminController extends Controller{
 
             return redirect('/ListaEventos');
         }
+    }
+
+    public function EliminarEvento($codEvento){
+        $evento = Eventos::where('codEvento', $codEvento)->first();
+        if($evento){
+            $codPista = $evento->codPista;
+            Eventos::destroy($codEvento);
+            $evento->save();
+            
+            $pistas = Pista::where('codPista', $codPista)->first();
+            if($pistas){
+                $pistas->disponible = 0;
+                $pistas->save();
+            }
+        }
+        
+        return redirect("ListaEventos");
     }
 }

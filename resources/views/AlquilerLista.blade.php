@@ -36,7 +36,10 @@
                             <td>{{$alq->fecha_alquiler}}</td>
                             <td>{{$alq->precio}}</td>                                
                             <td>{{$alq->descuento}}</td>
-                            <td><button class="btn btn-danger">Eliminar</button></td>
+                            <form action="{{ route('EliminarAlquiler', $alq->codPista) }}" method="post">
+                                @csrf
+                                <td><button type="submit" class="btn btn-danger">Eliminar</button></td>
+                            </form>
                             <td><a href="{{ route('ModificarAlquiler', $alq) }}" class="btn btn-primary">Modificar</a></td>
                         </tr>
                     @endforeach

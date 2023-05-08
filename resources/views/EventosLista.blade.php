@@ -38,7 +38,10 @@
                             <td>{{$evento->Descripcion}}</td>                                
                             <td>{{$evento->categoria}}</td>
                             <td>{{$evento->codUsuario}}</td>
-                            <td><button class="btn btn-danger">Eliminar</button></td>
+                            <form action="{{ route('EliminarEvento', $evento->codEvento) }}" method="post">
+                                @csrf
+                                <td><button type="submit" class="btn btn-danger">Eliminar</button></td>
+                            </form>
                             <td><a href="{{ route('ModificarEvento', $evento) }}" class="btn btn-primary">Modificar</a></td>
                         </tr>
                     @endforeach
