@@ -83,6 +83,10 @@ Route::get('/ModificarAlquiler/{alquiler}', [AdminController::class, 'ModificarA
 Route::put('/actualizarAlquiler/{codPista}', [AdminController::class, 'actualizarAlquiler'])->name('actualizarAlquiler');
 Route::post('/EliminarAlquiler/{codPista}', [AdminController::class, 'EliminarAlquiler'])->name('EliminarAlquiler');
 
+Route::get('/Terms_of_use_Privacy_policy', function(){ return view('memes');})->name('memes');
+
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

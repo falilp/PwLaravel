@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<title>Lista usuarios</title>
+<title>Lista eventos</title>
 <!--Menu de navegacion-->
 @extends('layouts.nav')
 @section('nav_content')

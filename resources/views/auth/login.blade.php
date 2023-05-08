@@ -54,8 +54,8 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
                             <!--<a class="small text-muted" href="#!">Forgot password?</a>-->
                             <p class="font-italic text-muted" style="color: #393f81;"><a href="{{ route('registro') }}"
                                 style="color: #393f81;">¿No estas registrado? Registrate</a></p>
-                            <a href="#!" class="small text-muted">Terms of use.</a>
-                            <a href="#!" class="small text-muted">Privacy policy</a>
+                            <a href="{{ route('memes') }}" class="small text-muted">Terms of use.</a>
+                            <a href="{{ route('memes') }}" class="small text-muted">Privacy policy</a>
                         </form>
                     </div>
                     </div>
