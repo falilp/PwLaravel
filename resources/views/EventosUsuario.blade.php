@@ -12,46 +12,38 @@
                 <thead>
                     <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Evento</th>
                     <th scope="col">Pista</th>
-                    <th scope="col">Fecha Evento/th>
-                    <th scope="col">Descripcion</th>
-                    <th scope="col">Categoria</th>
+                    <th scope="col">Fecha Alquiler</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php 
-                        use Illuminate\Support\Facades\Auth;
-                        use App\Models\Eventos;
-                        use App\Models\User; 
-                        $usuario = Auth::user();
-                        $codUsuario = $usuario->getAuthIdentifier();
-                        $pistas = Eventos::where('codUsuario', $codUsuario)->get();
-                        $pistas = Eventos::orderby('FechaEvento', 'desc')->get();
-                        $contador = 0;
-                        foreach($pistas as $pista): $contador++;?>
+                        @foreach ($pistas as $pista) 
                             <tr>
-                                <th scope="row"><?php echo $contador ?></th>
-                                <td><?php echo $pista->codEvento; ?></td>
-                                <td><?php echo $pista->codPista; ?></td>
-                                <td><?php echo $pista->FechaEvento; ?></td>
-                                <td><?php echo $pista->Descripcion; ?></td>
-
+                                <td>{{$contador++}}</td>
+                                <td>{{ $pista->codEvento }}</td>
+                                <td>{{ $pista->FechaEvento}}</td>
+                                <td>{{ $pista->Descripcion}}</td>
                                 
-                                <?php 
-                                    if($pista->fecha_alquiler > date('Y-m-d') )
-                                    {
-                                        ?>
-                                        <td><?php echo $pista->categoria; ?></td>
-                                        <td> <button class="btn btn-outline-dark">Eliminar</button></td><?php
-                                    }
-                                    else{
-                                        ?> <td colspan="2"><?php echo $pista->categoria; ?></td> <?php
-                                    }
-                                ?>
+                                
+                                    @if($pista->FechaEvento > date('Y-m-d') )
+                                    
+                                        
+                                        <td>{{ $pista->categoria}}</td>
+                                        <td>
+                                            <form action="{{ route('EventosUsuario.eliminar_reserva',['codEvento' => $pista->codEvento]) }}" method="post">
+                                                @csrf
+                                                <input type="text" value="" hidden>
+                                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                                            </form>
+                                    @else
+                                        <td colspan="2">{{ $pista->categoria}}</td>
+                                    
+                                    @endif
                                 
                             </tr>
-                        <?php endforeach; ?>
+                        @endforeach
                 </tbody>
             </table>
         </div>

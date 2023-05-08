@@ -52,8 +52,9 @@ Route::get('/Profile/ReservaUsuario', 'App\Http\Controllers\ReservaUsuarioContro
 Route::get('/Profile/EventosUsuario', 'App\Http\Controllers\EventosUsuarioController@index')->name('EventosUsuario');
 Route::put('/Profile/actualizar', 'App\Http\Controllers\ProfileController@actualizarUsuario')->name('ActualizarUsuario');
 
-
 Route::post('/Profile/ReservaUsuario/EliminarReserva/{codPista}', 'App\Http\Controllers\ReservaUsuarioController@eliminar_reserva')->name('ReservaUsuario.eliminar_reserva');
+Route::post('/Profile/EventosUsuario/EliminarReserva/{codEvento}', 'App\Http\Controllers\EventosUsuarioController@eliminar_reserva')->name('EventosUsuario.eliminar_reserva');
+
 Route::post('/eventos', 'App\Http\Controllers\EventosController@guardar_evento')->name('eventos.guardar');
 Route::get('/eventos/modal', 'App\Http\Controllers\EventosController@lanzar_modal')->name('eventos.modal');
 Route::get('/eventos/modal/personalizado', 'App\Http\Controllers\EventosController@lanzar_modal_personalizado')->name('eventos.modalPersonalizado');
