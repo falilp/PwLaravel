@@ -16,8 +16,11 @@
 @endsection
 
 <body>
-    <div style="background: url(https://fondosmil.com/fondo/5819.jpg); height: 100vh; background-size: cover;" class="img-fluid jumbotron bg-cover text-black">
+    
         </br>
+        <div class="card bg" style="width:800px;margin: 0 auto;">
+                <img class="card-img-top" style="height:600px" src="https://media.tenor.com/sFUpAcf_hjIAAAAM/bobo-messi.gif" alt="Card image">
+        </div>
         <div class="card-columns" style="margin-left:200px">
             <div class="card bg" style="width:400px">
                 <img class="card-img-top" style="height:200px" src="https://media.tenor.com/DtdzIpwIgyUAAAAC/me_listening_to1700_sea_shanties-pirate.gif" alt="Card image">
@@ -36,6 +39,51 @@
             </div>
             <div class="card bg" style="width:400px">
                 <img class="card-img-top" style="height:200px" src="https://media.tenor.com/GZgrtsucMK0AAAAi/discord-discordgifemoji.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/2_xeX2jkM0oAAAAM/caca-ldgc.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/LOllctK_zzMAAAAM/monkey-wake-up.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/-n8cL3Oo7-sAAAAd/chinese-egg.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/x0A5mjih6pUAAAAd/china-gigachad.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/JTzyH1USULoAAAAM/francis-bourgeois-train.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/kyvStPkuNyMAAAAd/star-wars-social-credit.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/2_ab6NdTEhoAAAAC/dick-friday.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/9efv8r_vr1gAAAAC/spongebob-sad.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/5hfUTrB_HEgAAAAC/caught-in4k-meme-kinkytwt.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/lUSuCND7pe4AAAAd/bakana.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/7VH3ll9iwpQAAAAd/anime-troll.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/N5SZ5a8g7ocAAAAd/when-sus.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/8usjSCdTh_YAAAAd/luffy-one.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/OXevc9fjZmgAAAAC/tasting-milk-antony-starr.gif" alt="Card image">
+            </div>
+            <div class="card bg" style="width:400px">
+                <img class="card-img-top" style="height:200px" src="https://media.tenor.com/sFUpAcf_hjIAAAAM/bobo-messi.gif" alt="Card image">
             </div>
         </div>
     </div>
