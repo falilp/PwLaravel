@@ -30,7 +30,7 @@
                     @foreach($alquiler as $alq)
                         @php $contador++ @endphp
                         <tr>
-                            <th scope="row">{{$contador}}</th>
+                            <td scope="row">{{$contador}}</td>
                             <td>{{$alq->codPista}}</td>
                             <td>{{$alq->codUsuario}}</td>
                             <td>{{$alq->fecha_alquiler}}</td>
@@ -47,10 +47,10 @@
             </table>
         </div>
 </body>
-<footer>
+
 <!--Footer -->
 @extends('layouts.footer')
 @section('footer_content')
 @endsection
-</footer>
+
 </html>

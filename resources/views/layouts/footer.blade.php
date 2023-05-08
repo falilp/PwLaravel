@@ -17,13 +17,13 @@
 
         <!-- Right -->
         <div>
-        <a href="" class="me-4 text-reset">
+        <a href="https://www.youtube.com/watch?v=Li2fXHoDP1s" class="me-4 text-reset">
             <i class="fab fa-facebook-f">facebook</i>
         </a>
-        <a href="" class="me-4 text-reset">
+        <a href="https://www.youtube.com/watch?v=Tx9zMFodNtA" class="me-4 text-reset">
             <i class="fab fa-twitter">twitter</i>
         </a>
-        <a href="" class="me-4 text-reset">
+        <a href="https://www.youtube.com/watch?v=AAbAw3sgeow" class="me-4 text-reset">
             <i class="fab fa-instagram">instagram</i>
         </a>
         </div>

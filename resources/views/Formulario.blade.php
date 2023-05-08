@@ -14,15 +14,15 @@
     <img src="..\public\img\fondoBlanco.png">
     <div class="header_pistas">
 
-    <div class="container py-5">
+    <div class="py-5" style="display:flex; flex-direction:column;  text-align: center">
     <h2 class="h3 font-weight-bold">Formulario Reserva Pistas: {{ $nomPista }}</h2>
     <p class="font-italic text-muted"><strong>Rellena el formulario para completar la reserva</strong></p>
-    <a href="{{ route('alquiler', ['tipoPista' => $tipoPista, 'fecha' => Carbon\Carbon::parse($fecha)->addDay()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Anvanzar: {{ Carbon\Carbon::parse($fecha)->addDay()->format('Y-m-d') }}</button></a>
+    <a href="{{ route('alquiler', ['tipoPista' => $tipoPista, 'fecha' => Carbon\Carbon::parse($fecha)->addDay()->format('Y-m-d')]) }}"><button type="button" class="btn btn-dark">Avanzar: {{ Carbon\Carbon::parse($fecha)->addDay()->format('Y-m-d') }}</button></a>
     <p class="font-italic text-muted">Reserva ahora:</p>
 
-    <div class="col-lg-8">
+    <div class="">
     <div class="row">
-    <div class="col-lg-10 mb-4">
+    <div style="margin: 10px auto;">
     <form action="{{ route('alquiler.guardar_reserva') }}" method="post">
     @csrf
     <div class="container">        
