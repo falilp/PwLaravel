@@ -86,7 +86,7 @@
     @endif
 </div>
 
-<div class="container-img">
+<div style="text-align: center;" class="container-img">
     <img src="https://s1.eestatic.com/2021/12/24/malaga/vivir/637196374_218596164_1706x960.jpg">
 </div>
 
@@ -114,7 +114,7 @@
     </div>
     @endif
 </div>
-<div class="container-img">
+<div style="text-align: center;" class="container-img">
     <img src="https://pland-architects.com/wp-content/uploads/2019/11/City-Mall-Karting-Track.jpg">
 </div>
 </body> 
