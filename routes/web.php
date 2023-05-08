@@ -55,6 +55,8 @@ Route::put('/Profile/actualizar', 'App\Http\Controllers\ProfileController@actual
 
 Route::post('/Profile/ReservaUsuario/EliminarReserva/{codPista}', 'App\Http\Controllers\ReservaUsuarioController@eliminar_reserva')->name('ReservaUsuario.eliminar_reserva');
 Route::post('/eventos', 'App\Http\Controllers\EventosController@guardar_evento')->name('eventos.guardar');
+Route::get('/eventos/modal', 'App\Http\Controllers\EventosController@lanzar_modal')->name('eventos.modal');
+Route::get('/eventos/modal/personalizado', 'App\Http\Controllers\EventosController@lanzar_modal_personalizado')->name('eventos.modalPersonalizado');
 
 Route::get('/admin', [AdminController::class, 'Home'])->name('adminHome');
 

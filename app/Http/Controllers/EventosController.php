@@ -18,9 +18,9 @@ class EventosController extends Controller
         $codUsuario = $usuario->getAuthIdentifier();
         
         $eventos = Eventos::all();
-        $evento_concreto = $eventos->where('Descripcion', $descripcion);
-        if($evento_concreto != null){
-            $existe = $evento_concreto->where('codUsuario', $codUsuario);
+        $usuario = $eventos->where('codUsuario', $codUsuario);
+        if($usuario != null){
+            $existe = $usuario->where('Descripcion', $descripcion)->first();
         }else{
             $existe = null;
         }
@@ -36,7 +36,7 @@ class EventosController extends Controller
             
             return redirect()->route('home');
         }else{
-            return redirect()->route('eventos');
+            return redirect('http://localhost/PwLaravel/public/eventos/modal#openModal');
         }
     }
 
@@ -52,40 +52,24 @@ class EventosController extends Controller
         $descripcion = $_POST['descripcion'];
     
         //Filtramos la tabla de pista por el tipoPista
-    $pistas = Pista::all()->where('tipoPista', $tipoPista);
-    
-    //Consultar disponiblidad en Horario de Mañana
-    //Filtramos la fecha en la tabla de pistas por la que el usuario nos ha indicado
-    //Ahora iteramos sobre $horas_disponibles desde las 10:00 hasta las 14:00
-    //En caso de que alguna ya este ocupada marcamos como false y cancelamos el proceso de registro de evento
-    if ($horario == 0) {
-        $inicio_horario = '10:00:00';
-        $fin_horario = '14:00:00';
-    } else {
-        $inicio_horario = '17:00:00';
-        $fin_horario = '21:00:00';
-    }
-    
-    $fecha_inicio = DateTime::createFromFormat('Y-m-d H:i:s', $fecha . ' ' . $inicio_horario);
-    $fecha_fin = DateTime::createFromFormat('Y-m-d H:i:s', $fecha . ' ' . $fin_horario);
-
-    
-    $pistas = Pista::where('tipoPista', $tipoPista)
-        ->whereBetween('HoraDisponible', [$fecha_inicio, $fecha_fin])
-        ->get();
-    
-    $reserva = true;
-    
-    //Verificamos que todas las pistas estén disponibles
-    foreach ($pistas as $pista) {
-        if ($pista->disponible == 1) {
-            $reserva = false;
-            break;
+        $pistas = Eventos::all()->where('tipoPista', $tipoPista);
+        $reserva = $pistas->filter(function ($item) use ($fecha) {
+            return substr($item->HoraDisponible, 0, 10) == $fecha;
+        });
+        
+          //Consultar disponiblidad en Horario de Mañana
+            //Filtramos la fecha en la tabla de pistas por la que el usuario nos ha indicado
+            //Ahora iteramos sobre $horas_disponibles desde las 10:00 hasta las 14:00
+            //En caso de que alguna ya este ocupada marcamos como false y cancelamos el proceso de registro de evento
+        if($horario == 0){
+            $horario = 'Mannana';
+        }else{
+            $horario = 'Tarde';
         }
-    }
+        $reserva = $reserva->where('categoria', $horario);
     
     //Si están todas disponibles creamos la reserva
-    if ($reserva) {
+    if ($reserva == null) {
         //Creamos registro en la tabla de Eventos
         $evento = new Eventos;
         $evento->tipoPista = $tipoPista;
@@ -99,18 +83,19 @@ class EventosController extends Controller
         $evento->codUsuario = $codUsuario;
         $evento->save();
     
-        //Reservamos todas las pistas
-        foreach ($pistas as $pista) {
-            $pista->disponible = 1;
-            $pista->save();
-        }
-    
         // Redirigir al usuario a la página de lista de eventos con un mensaje de confirmación
-        return redirect()->route('home')->with('success', 'Reserva creada exitosamente.');
+        return redirect()->route('home');
 
         }else{
             //Indicamos al usuario que no hay hueco para la reserva
-            return redirect()->route('eventos');
+            return redirect('http://localhost/PwLaravel/public/eventos/modal/personalizado#openModal');
         }
+    }
+
+    public function lanzar_modal(){
+        return view('ModalEvento');
+    }
+    public function lanzar_modal_personalizado(){
+        return view('ModalEventoPersonalizado');
     }
 }
