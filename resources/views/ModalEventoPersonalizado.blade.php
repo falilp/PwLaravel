@@ -26,8 +26,6 @@
         </div>
     </div>
 
-    <a href="#openModal">Lanzar el modal</a>
-
     <div id="openModal" class="modalDialog">
         <div>
             <a href="{{ route('eventos') }}" title="Close" class="close">X</a>
